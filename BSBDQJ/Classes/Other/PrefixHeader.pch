@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  BSBDQJ
+//
+//  Created by rgc on 16/3/13.
+//  Copyright © 2016年 RGC. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+RGCExtension.h"
+
+#ifdef DEBUG
+#define RGCLog(...) NSLog(__VA_ARGS__)
+#else
+#define RGCLog(...)
+#endif
+
+#define RGCLogFunc RGCLog(@"%s", __func__)
+
+#endif /* PrefixHeader_pch */
