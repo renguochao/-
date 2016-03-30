@@ -7,32 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D9B48D971C9457CD00D36FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B48D951C9457CD00D36FAD /* Main.storyboard */; };
+		D7E8736A847AEFD685C518C5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07774A7560866395CF05F392 /* libPods.a */; };
+		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
+		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
+		D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A421CABC52000F409DD /* RGCMeViewController.m */; };
+		D9A89A461CABC52C00F409DD /* RGCNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A451CABC52C00F409DD /* RGCNewViewController.m */; };
 		D9B48D991C9457CD00D36FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B48D981C9457CD00D36FAD /* Assets.xcassets */; };
 		D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DC81C97F54600D36FAD /* AppDelegate.m */; };
 		D9B48DD31C97F54600D36FAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DC91C97F54600D36FAD /* main.m */; };
 		D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DCC1C97F54600D36FAD /* RGCFriendTrendViewController.m */; };
 		D9B48DD51C97F54600D36FAD /* RGCFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B48DCD1C97F54600D36FAD /* RGCFriendTrendViewController.xib */; };
 		D9B48DD61C97F54600D36FAD /* UIView+RGCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DCF1C97F54600D36FAD /* UIView+RGCExtension.m */; };
-		D9B48DD71C97F54600D36FAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DD11C97F54600D36FAD /* ViewController.m */; };
+		D9B48DDC1C97FD3C00D36FAD /* RGCRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DDA1C97FD3C00D36FAD /* RGCRecommendViewController.m */; };
+		D9B48DDD1C97FD3C00D36FAD /* RGCRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B48DDB1C97FD3C00D36FAD /* RGCRecommendViewController.xib */; };
+		D9B48DE01C97FF2900D36FAD /* RGCRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DDF1C97FF2900D36FAD /* RGCRecommendCategory.m */; };
+		D9B48DE41C98018500D36FAD /* RGCRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DE21C98018500D36FAD /* RGCRecommendCategoryCell.m */; };
+		D9B48DE51C98018500D36FAD /* RGCRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B48DE31C98018500D36FAD /* RGCRecommendCategoryCell.xib */; };
+		D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DE71C9849FF00D36FAD /* RGCRecommendUserCell.m */; };
+		D9B48DEA1C9849FF00D36FAD /* RGCRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07774A7560866395CF05F392 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FD50AFA98A4E8AEACFEC42A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		557A589194A40C4B6444D3AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
+		D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMainViewController.m; sourceTree = "<group>"; };
+		D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCEssenceViewController.h; sourceTree = "<group>"; };
+		D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCEssenceViewController.m; sourceTree = "<group>"; };
+		D9A89A411CABC52000F409DD /* RGCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMeViewController.h; sourceTree = "<group>"; };
+		D9A89A421CABC52000F409DD /* RGCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMeViewController.m; sourceTree = "<group>"; };
+		D9A89A441CABC52C00F409DD /* RGCNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCNewViewController.h; sourceTree = "<group>"; };
+		D9A89A451CABC52C00F409DD /* RGCNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCNewViewController.m; sourceTree = "<group>"; };
 		D9B48D891C9457CD00D36FAD /* BSBDQJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSBDQJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D9B48D961C9457CD00D36FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9B48D981C9457CD00D36FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9B48D9D1C9457CE00D36FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B48DC71C97F54600D36FAD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D9B48DC81C97F54600D36FAD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D9B48DC91C97F54600D36FAD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D9B48DCA1C97F54600D36FAD /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		D9B48DCB1C97F54600D36FAD /* RGCFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCFriendTrendViewController.h; sourceTree = "<group>"; };
-		D9B48DCC1C97F54600D36FAD /* RGCFriendTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCFriendTrendViewController.m; sourceTree = "<group>"; };
-		D9B48DCD1C97F54600D36FAD /* RGCFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCFriendTrendViewController.xib; sourceTree = "<group>"; };
-		D9B48DCE1C97F54600D36FAD /* UIView+RGCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RGCExtension.h"; sourceTree = "<group>"; };
-		D9B48DCF1C97F54600D36FAD /* UIView+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RGCExtension.m"; sourceTree = "<group>"; };
-		D9B48DD01C97F54600D36FAD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D9B48DD11C97F54600D36FAD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D9B48DCB1C97F54600D36FAD /* RGCFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RGCFriendTrendViewController.h; path = ../../RGCFriendTrendViewController.h; sourceTree = "<group>"; };
+		D9B48DCC1C97F54600D36FAD /* RGCFriendTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RGCFriendTrendViewController.m; path = ../../RGCFriendTrendViewController.m; sourceTree = "<group>"; };
+		D9B48DCD1C97F54600D36FAD /* RGCFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RGCFriendTrendViewController.xib; path = ../../RGCFriendTrendViewController.xib; sourceTree = "<group>"; };
+		D9B48DCE1C97F54600D36FAD /* UIView+RGCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+RGCExtension.h"; path = "../../UIView+RGCExtension.h"; sourceTree = "<group>"; };
+		D9B48DCF1C97F54600D36FAD /* UIView+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+RGCExtension.m"; path = "../../UIView+RGCExtension.m"; sourceTree = "<group>"; };
+		D9B48DD91C97FD3C00D36FAD /* RGCRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendViewController.h; sourceTree = "<group>"; };
+		D9B48DDA1C97FD3C00D36FAD /* RGCRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendViewController.m; sourceTree = "<group>"; };
+		D9B48DDB1C97FD3C00D36FAD /* RGCRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCRecommendViewController.xib; sourceTree = "<group>"; };
+		D9B48DDE1C97FF2900D36FAD /* RGCRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendCategory.h; sourceTree = "<group>"; };
+		D9B48DDF1C97FF2900D36FAD /* RGCRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendCategory.m; sourceTree = "<group>"; };
+		D9B48DE11C98018500D36FAD /* RGCRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendCategoryCell.h; sourceTree = "<group>"; };
+		D9B48DE21C98018500D36FAD /* RGCRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendCategoryCell.m; sourceTree = "<group>"; };
+		D9B48DE31C98018500D36FAD /* RGCRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		D9B48DE61C9849FF00D36FAD /* RGCRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendUserCell.h; sourceTree = "<group>"; };
+		D9B48DE71C9849FF00D36FAD /* RGCRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendUserCell.m; sourceTree = "<group>"; };
+		D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCRecommendUserCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,17 +69,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E8736A847AEFD685C518C5 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E2F3ADDD1841E9995CBDBE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07774A7560866395CF05F392 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9B48D801C9457CD00D36FAD = {
 			isa = PBXGroup;
 			children = (
 				D9B48D8B1C9457CD00D36FAD /* BSBDQJ */,
 				D9B48D8A1C9457CD00D36FAD /* Products */,
+				F5A9127DC3C156733B313598 /* Pods */,
+				7E2F3ADDD1841E9995CBDBE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,7 +114,6 @@
 		D9B48D8C1C9457CD00D36FAD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D9B48D951C9457CD00D36FAD /* Main.storyboard */,
 				D9B48D981C9457CD00D36FAD /* Assets.xcassets */,
 				D9B48D9D1C9457CE00D36FAD /* Info.plist */,
 			);
@@ -90,13 +129,6 @@
 				D9B48DBC1C97F54600D36FAD /* Me */,
 				D9B48DC11C97F54600D36FAD /* New */,
 				D9B48DC61C97F54600D36FAD /* Other */,
-				D9B48DCB1C97F54600D36FAD /* RGCFriendTrendViewController.h */,
-				D9B48DCC1C97F54600D36FAD /* RGCFriendTrendViewController.m */,
-				D9B48DCD1C97F54600D36FAD /* RGCFriendTrendViewController.xib */,
-				D9B48DCE1C97F54600D36FAD /* UIView+RGCExtension.h */,
-				D9B48DCF1C97F54600D36FAD /* UIView+RGCExtension.m */,
-				D9B48DD01C97F54600D36FAD /* ViewController.h */,
-				D9B48DD11C97F54600D36FAD /* ViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -115,6 +147,8 @@
 		D9B48DAE1C97F54600D36FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */,
+				D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,6 +188,12 @@
 		D9B48DB31C97F54600D36FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9B48DCB1C97F54600D36FAD /* RGCFriendTrendViewController.h */,
+				D9B48DCC1C97F54600D36FAD /* RGCFriendTrendViewController.m */,
+				D9B48DCD1C97F54600D36FAD /* RGCFriendTrendViewController.xib */,
+				D9B48DD91C97FD3C00D36FAD /* RGCRecommendViewController.h */,
+				D9B48DDA1C97FD3C00D36FAD /* RGCRecommendViewController.m */,
+				D9B48DDB1C97FD3C00D36FAD /* RGCRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +201,8 @@
 		D9B48DB41C97F54600D36FAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D9B48DDE1C97FF2900D36FAD /* RGCRecommendCategory.h */,
+				D9B48DDF1C97FF2900D36FAD /* RGCRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +217,12 @@
 		D9B48DB61C97F54600D36FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D9B48DE11C98018500D36FAD /* RGCRecommendCategoryCell.h */,
+				D9B48DE21C98018500D36FAD /* RGCRecommendCategoryCell.m */,
+				D9B48DE31C98018500D36FAD /* RGCRecommendCategoryCell.xib */,
+				D9B48DE61C9849FF00D36FAD /* RGCRecommendUserCell.h */,
+				D9B48DE71C9849FF00D36FAD /* RGCRecommendUserCell.m */,
+				D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,6 +230,7 @@
 		D9B48DB71C97F54600D36FAD /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D9B48DD81C97FB7000D36FAD /* Category */,
 				D9B48DB81C97F54600D36FAD /* Controller */,
 				D9B48DB91C97F54600D36FAD /* Model */,
 				D9B48DBA1C97F54600D36FAD /* Tool */,
@@ -193,6 +242,8 @@
 		D9B48DB81C97F54600D36FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */,
+				D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,6 +283,8 @@
 		D9B48DBD1C97F54600D36FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9A89A411CABC52000F409DD /* RGCMeViewController.h */,
+				D9A89A421CABC52000F409DD /* RGCMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +324,8 @@
 		D9B48DC21C97F54600D36FAD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D9A89A441CABC52C00F409DD /* RGCNewViewController.h */,
+				D9A89A451CABC52C00F409DD /* RGCNewViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +362,24 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		D9B48DD81C97FB7000D36FAD /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D9B48DCE1C97F54600D36FAD /* UIView+RGCExtension.h */,
+				D9B48DCF1C97F54600D36FAD /* UIView+RGCExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F5A9127DC3C156733B313598 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2FD50AFA98A4E8AEACFEC42A /* Pods.debug.xcconfig */,
+				557A589194A40C4B6444D3AD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,9 +387,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9B48DA01C9457CE00D36FAD /* Build configuration list for PBXNativeTarget "BSBDQJ" */;
 			buildPhases = (
+				1DABC6F785401C4679076EFC /* Check Pods Manifest.lock */,
 				D9B48D851C9457CD00D36FAD /* Sources */,
 				D9B48D861C9457CD00D36FAD /* Frameworks */,
 				D9B48D871C9457CD00D36FAD /* Resources */,
+				22C8C08C2EFB164A5B97D9E7 /* Embed Pods Frameworks */,
+				9B022B6A2F0E3B0631F9D750 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -365,39 +441,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B48DDD1C97FD3C00D36FAD /* RGCRecommendViewController.xib in Resources */,
+				D9B48DE51C98018500D36FAD /* RGCRecommendCategoryCell.xib in Resources */,
 				D9B48DD51C97F54600D36FAD /* RGCFriendTrendViewController.xib in Resources */,
 				D9B48D991C9457CD00D36FAD /* Assets.xcassets in Resources */,
-				D9B48D971C9457CD00D36FAD /* Main.storyboard in Resources */,
+				D9B48DEA1C9849FF00D36FAD /* RGCRecommendUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DABC6F785401C4679076EFC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22C8C08C2EFB164A5B97D9E7 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B022B6A2F0E3B0631F9D750 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D9B48D851C9457CD00D36FAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9B48DDC1C97FD3C00D36FAD /* RGCRecommendViewController.m in Sources */,
+				D9B48DE41C98018500D36FAD /* RGCRecommendCategoryCell.m in Sources */,
+				D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */,
 				D9B48DD31C97F54600D36FAD /* main.m in Sources */,
 				D9B48DD61C97F54600D36FAD /* UIView+RGCExtension.m in Sources */,
+				D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */,
+				D9B48DE01C97FF2900D36FAD /* RGCRecommendCategory.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
-				D9B48DD71C97F54600D36FAD /* ViewController.m in Sources */,
+				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
+				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
+				D9A89A461CABC52C00F409DD /* RGCNewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		D9B48D951C9457CD00D36FAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D9B48D961C9457CD00D36FAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D9B48D9E1C9457CE00D36FAD /* Debug */ = {
@@ -482,10 +604,11 @@
 		};
 		D9B48DA11C9457CE00D36FAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FD50AFA98A4E8AEACFEC42A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = BSBDQJ/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = BSBDQJ/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = BSBDQJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telecomjs.BSBDQJ;
@@ -495,10 +618,11 @@
 		};
 		D9B48DA21C9457CE00D36FAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 557A589194A40C4B6444D3AD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PREFIX_HEADER = BSBDQJ/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = BSBDQJ/Classes/Other/PrefixHeader.pch;
 				INFOPLIST_FILE = BSBDQJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.telecomjs.BSBDQJ;

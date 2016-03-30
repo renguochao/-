@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RGCRecommendViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="OY0-vS-rky" id="rpe-B5-lwi"/>
+                <outlet property="userTableView" destination="Cmf-qn-N15" id="IJW-vV-pnF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OY0-vS-rky" userLabel="左侧">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="Spw-3Q-zFb"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BVh-yl-IkP"/>
+                        <outlet property="delegate" destination="-1" id="ncu-hu-umE"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-qn-N15" userLabel="右侧">
+                    <rect key="frame" x="70" y="0.0" width="530" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="KsR-bp-v11"/>
+                        <outlet property="delegate" destination="-1" id="Neb-ih-k6z"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cmf-qn-N15" secondAttribute="bottom" id="5oO-sY-42e"/>
+                <constraint firstItem="Cmf-qn-N15" firstAttribute="leading" secondItem="OY0-vS-rky" secondAttribute="trailing" id="7yf-Vz-Wtf"/>
+                <constraint firstAttribute="bottom" secondItem="OY0-vS-rky" secondAttribute="bottom" id="Zyq-W1-0YU"/>
+                <constraint firstItem="Cmf-qn-N15" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b6q-g4-D0K"/>
+                <constraint firstItem="OY0-vS-rky" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="nSx-cM-De2"/>
+                <constraint firstItem="OY0-vS-rky" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qIF-4e-co6"/>
+                <constraint firstAttribute="trailing" secondItem="Cmf-qn-N15" secondAttribute="trailing" id="qxy-4X-qQg"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
