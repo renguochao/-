@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D7E8736A847AEFD685C518C5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07774A7560866395CF05F392 /* libPods.a */; };
 		D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D923563D1CAC01B6004B3FFD /* RGCTabBar.m */; };
+		D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356401CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
 		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
 		D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A421CABC52000F409DD /* RGCMeViewController.m */; };
@@ -34,6 +35,8 @@
 		557A589194A40C4B6444D3AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D923563C1CAC01B6004B3FFD /* RGCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTabBar.h; sourceTree = "<group>"; };
 		D923563D1CAC01B6004B3FFD /* RGCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTabBar.m; sourceTree = "<group>"; };
+		D923563F1CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+RGCExtension.h"; sourceTree = "<group>"; };
+		D92356401CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+RGCExtension.m"; sourceTree = "<group>"; };
 		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
 		D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMainViewController.m; sourceTree = "<group>"; };
 		D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCEssenceViewController.h; sourceTree = "<group>"; };
@@ -372,6 +375,8 @@
 			children = (
 				D9B48DCE1C97F54600D36FAD /* UIView+RGCExtension.h */,
 				D9B48DCF1C97F54600D36FAD /* UIView+RGCExtension.m */,
+				D923563F1CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.h */,
+				D92356401CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				D9B48DE01C97FF2900D36FAD /* RGCRecommendCategory.m in Sources */,
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
+				D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
