@@ -39,11 +39,11 @@
     // 添加子控制器
     [self setupChildVc:[[RGCEssenceViewController alloc] init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
     
-    [self setupChildVc:[[RGCEssenceViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
+    [self setupChildVc:[[RGCNewViewController alloc] init] title:@"新帖" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    [self setupChildVc:[[RGCEssenceViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+    [self setupChildVc:[[RGCFriendTrendViewController alloc] init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
     
-    [self setupChildVc:[[RGCEssenceViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    [self setupChildVc:[[RGCMeViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     // 更换TabBar
     [self setValue:[[RGCTabBar alloc] init] forKey:@"tabBar"];
@@ -54,13 +54,17 @@
  */
 - (void)setupChildVc:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage {
     // 设置文字和图片
+    vc.navigationItem.title = title;
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
 //    [vc.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; 图片不被渲染
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    
+    // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     // 添加子控制器
-    [self addChildViewController:vc];
+    [self addChildViewController:nav];
 }
 
 @end
