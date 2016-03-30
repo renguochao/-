@@ -11,6 +11,7 @@
 #import "RGCFriendTrendViewController.h"
 #import "RGCMeViewController.h"
 #import "RGCNewViewController.h"
+#import "RGCTabBar.h"
 
 @interface RGCMainViewController ()
 
@@ -44,6 +45,8 @@
     
     [self setupChildVc:[[RGCEssenceViewController alloc] init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
+    // 更换TabBar
+    [self setValue:[[RGCTabBar alloc] init] forKey:@"tabBar"];
 }
 
 /**
@@ -53,6 +56,7 @@
     // 设置文字和图片
     vc.tabBarItem.title = title;
     vc.tabBarItem.image = [UIImage imageNamed:image];
+//    [vc.tabBarItem.image imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]; 图片不被渲染
     vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
     vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
     // 添加子控制器

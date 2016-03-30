@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D7E8736A847AEFD685C518C5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07774A7560866395CF05F392 /* libPods.a */; };
+		D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D923563D1CAC01B6004B3FFD /* RGCTabBar.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
 		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
 		D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A421CABC52000F409DD /* RGCMeViewController.m */; };
@@ -31,6 +32,8 @@
 		07774A7560866395CF05F392 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD50AFA98A4E8AEACFEC42A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		557A589194A40C4B6444D3AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D923563C1CAC01B6004B3FFD /* RGCTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTabBar.h; sourceTree = "<group>"; };
+		D923563D1CAC01B6004B3FFD /* RGCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTabBar.m; sourceTree = "<group>"; };
 		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
 		D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMainViewController.m; sourceTree = "<group>"; };
 		D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCEssenceViewController.h; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 		D9B48DBB1C97F54600D36FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D923563C1CAC01B6004B3FFD /* RGCTabBar.h */,
+				D923563D1CAC01B6004B3FFD /* RGCTabBar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -511,6 +516,7 @@
 				D9B48DD61C97F54600D36FAD /* UIView+RGCExtension.m in Sources */,
 				D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */,
 				D9B48DE01C97FF2900D36FAD /* RGCRecommendCategory.m in Sources */,
+				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
