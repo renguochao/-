@@ -7,6 +7,7 @@
 //
 
 #import "RGCFriendTrendViewController.h"
+#import "RGCRecommendViewController.h"
 
 @interface RGCFriendTrendViewController ()
 
@@ -29,7 +30,10 @@
 }
 
 - (void)friendsClick {
-    RGCLogFunc;
+    
+    RGCRecommendViewController *vc = [[RGCRecommendViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 @end
