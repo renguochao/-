@@ -10,6 +10,18 @@
 
 @implementation RGCNavigationController
 
+/**
+ *  第一次使用这个类的时候会调用一次
+ */
++ (void)initialize {
+    
+    // 当导航栏用在RGCNavigationController中，appearance设置才会生效
+//    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[([self class])]];
+    
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -30,6 +42,7 @@
         // 让按钮内部的所有内容往左边偏移30
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
         [button addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+        // 修改导航栏左边的item
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
         
         // 隐藏tabbar

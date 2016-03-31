@@ -10,7 +10,6 @@
 		D7E8736A847AEFD685C518C5 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07774A7560866395CF05F392 /* libPods.a */; };
 		D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D923563D1CAC01B6004B3FFD /* RGCTabBar.m */; };
 		D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356401CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m */; };
-		D92356441CAC354C004B3FFD /* RGCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356431CAC354C004B3FFD /* RGCTestViewController.m */; };
 		D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356461CACABE7004B3FFD /* RGCNavigationController.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
 		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
@@ -39,8 +38,6 @@
 		D923563D1CAC01B6004B3FFD /* RGCTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTabBar.m; sourceTree = "<group>"; };
 		D923563F1CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+RGCExtension.h"; sourceTree = "<group>"; };
 		D92356401CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+RGCExtension.m"; sourceTree = "<group>"; };
-		D92356421CAC354C004B3FFD /* RGCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTestViewController.h; sourceTree = "<group>"; };
-		D92356431CAC354C004B3FFD /* RGCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTestViewController.m; sourceTree = "<group>"; };
 		D92356451CACABE7004B3FFD /* RGCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCNavigationController.h; sourceTree = "<group>"; };
 		D92356461CACABE7004B3FFD /* RGCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCNavigationController.m; sourceTree = "<group>"; };
 		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
@@ -161,8 +158,6 @@
 			children = (
 				D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */,
 				D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */,
-				D92356421CAC354C004B3FFD /* RGCTestViewController.h */,
-				D92356431CAC354C004B3FFD /* RGCTestViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -535,7 +530,6 @@
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */,
-				D92356441CAC354C004B3FFD /* RGCTestViewController.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
