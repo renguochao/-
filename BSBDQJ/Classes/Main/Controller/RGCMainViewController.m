@@ -11,6 +11,7 @@
 #import "RGCFriendTrendViewController.h"
 #import "RGCMeViewController.h"
 #import "RGCNewViewController.h"
+#import "RGCNavigationController.h"
 #import "RGCTabBar.h"
 
 @interface RGCMainViewController ()
@@ -62,7 +63,7 @@
     vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
     
     // 包装一个导航控制器, 添加导航控制器为tabbarcontroller的子控制器
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    RGCNavigationController *nav = [[RGCNavigationController alloc] initWithRootViewController:vc];
     // 添加子控制器
     [self addChildViewController:nav];
 }

@@ -7,6 +7,7 @@
 //
 
 #import "RGCEssenceViewController.h"
+#import "RGCTestViewController.h"
 
 @interface RGCEssenceViewController ()
 
@@ -26,6 +27,11 @@
 
 - (void)tagClick {
     RGCLogFunc;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    RGCTestViewController *vc = [[RGCTestViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
