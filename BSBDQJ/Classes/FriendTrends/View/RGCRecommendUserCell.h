@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RGCRecommendUser;
 
 @interface RGCRecommendUserCell : UITableViewCell
+/** 用户模型 */
+@property (nonatomic, strong) RGCRecommendUser *user;
 
 @end

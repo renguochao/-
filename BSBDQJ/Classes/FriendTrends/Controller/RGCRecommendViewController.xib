@@ -28,12 +28,11 @@
                         <outlet property="delegate" destination="-1" id="ncu-hu-umE"/>
                     </connections>
                 </tableView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-qn-N15" userLabel="右侧">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-qn-N15" userLabel="右侧">
                     <rect key="frame" x="70" y="0.0" width="530" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="KsR-bp-v11"/>
-                        <outlet property="delegate" destination="-1" id="Neb-ih-k6z"/>
                     </connections>
                 </tableView>
             </subviews>

@@ -7,17 +7,26 @@
 //
 
 #import "RGCRecommendUserCell.h"
+#import "RGCRecommendUser.h"
+#import <UIImageView+WebCache.h>
+
+@interface RGCRecommendUserCell()
+@property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *screenNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fansCountLabel;
+
+@end
 
 @implementation RGCRecommendUserCell
 
-- (void)awakeFromNib {
-    // Initialization code
+- (void)setUser:(RGCRecommendUser *)user {
+    _user = user;
+    
+    self.screenNameLabel.text = user.screen_name;
+    self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
+    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
-}
 
 @end
