@@ -25,8 +25,10 @@
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 右边类别表格 */
 @property (weak, nonatomic) IBOutlet UITableView *userTableView;
-
-
+/** 请求参数 */
+@property (nonatomic, strong) NSMutableDictionary *params;
+/** AFN请求管理器 */
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 
 @end
 
@@ -34,6 +36,14 @@
 
 static NSString * const RGCCategoryId = @"category";
 static NSString * const RGCUserId = @"user";
+
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,6 +54,15 @@ static NSString * const RGCUserId = @"user";
     // 添加刷新控件
     [self setupRefresh];
     
+    // 加载左侧的类别数据
+    [self loadCategories];
+    
+}
+
+/**
+ *  加载左侧的类别数据
+ */
+- (void)loadCategories {
     // 显示指示器
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeBlack];
     
@@ -51,7 +70,7 @@ static NSString * const RGCUserId = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"category";
     params[@"c"] = @"subscribe";
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
         // 隐藏指示器
         [SVProgressHUD dismiss];
@@ -70,7 +89,6 @@ static NSString * const RGCUserId = @"user";
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
         
     }];
-    
 }
 
 /**
@@ -123,9 +141,16 @@ static NSString * const RGCUserId = @"user";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(c.id);
     params[@"page"] = @(c.currentPage);
+    self.params = params;
     
     // 发送请求给服务器，加载右侧数据
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        
+        // 回调block检测是否是最后一次请求的回调
+        // 如不是则返回
+        if (self.params != params) {
+            return;
+        }
         
         // 服务器返回的JSON数据
         NSArray *users = [RGCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -150,6 +175,12 @@ static NSString * const RGCUserId = @"user";
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
+        // 回调block检测是否是最后一次请求的回调
+        // 如不是则返回
+        if (self.params != params) {
+            return;
+        }
+        
         // 显示错误信息
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
         
@@ -172,7 +203,13 @@ static NSString * const RGCUserId = @"user";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @([category id]);
     params[@"page"] = @(++ category.currentPage);
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    self.params = params;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    
+        if (self.params != params) {
+            return;
+        }
         
         // 隐藏指示器
         [SVProgressHUD dismiss];
@@ -192,6 +229,10 @@ static NSString * const RGCUserId = @"user";
         [self checkFooterState];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        if (self.params != params) {
+            return;
+        }
         
         // 显示错误信息
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败！"];
@@ -263,6 +304,11 @@ static NSString * const RGCUserId = @"user";
 
 #pragma mark - <UITableViewDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // 结束刷新
+    [self.userTableView.mj_header endRefreshing];
+    [self.userTableView.mj_footer endRefreshing];
+    
     RGCRecommendCategory *c = self.categories[indexPath.row];
     
     if (c.users.count) {
@@ -283,6 +329,13 @@ static NSString * const RGCUserId = @"user";
         [self.userTableView.mj_header beginRefreshing];
     }
     
+}
+
+#pragma mark - 控制器销毁
+- (void)dealloc {
+    
+    // 停止所有请求操作
+    [self.manager.operationQueue cancelAllOperations];
 }
 
 @end
