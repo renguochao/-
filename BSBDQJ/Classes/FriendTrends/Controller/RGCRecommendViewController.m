@@ -81,7 +81,13 @@ static NSString * const RGCUserId = @"user";
         // 刷新左侧表格
         [self.categoryTableView reloadData];
         
-        RGCLog(@"%@", responseObject);
+        // 默认选中首行
+        [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
+        
+        // 让用户进入下拉刷新状态
+        [self.userTableView.mj_header beginRefreshing];
+        
+//        RGCLog(@"%@", responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -146,12 +152,6 @@ static NSString * const RGCUserId = @"user";
     // 发送请求给服务器，加载右侧数据
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
-        // 回调block检测是否是最后一次请求的回调
-        // 如不是则返回
-        if (self.params != params) {
-            return;
-        }
-        
         // 服务器返回的JSON数据
         NSArray *users = [RGCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -161,6 +161,12 @@ static NSString * const RGCUserId = @"user";
         
         // 保存总数
         c.total = [responseObject[@"total"] integerValue];
+        
+        // 回调block检测是否是最后一次请求的回调
+        // 如不是则返回
+        if (self.params != params) {
+            return;
+        }
         
         // 刷新左侧表格
         [self.userTableView reloadData];
@@ -206,19 +212,16 @@ static NSString * const RGCUserId = @"user";
     self.params = params;
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
-    
-        if (self.params != params) {
-            return;
-        }
-        
-        // 隐藏指示器
-        [SVProgressHUD dismiss];
         
         // 服务器返回的JSON数据
         NSArray *users = [RGCRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         // 添加到当前类别对应的用户数组中
         [[category users] addObjectsFromArray:users];
+        
+        if (self.params != params) {
+            return;
+        }
         
         // 刷新左侧表格
         [self.userTableView reloadData];
