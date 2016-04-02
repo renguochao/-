@@ -7,6 +7,7 @@
 //
 
 #import "RGCEssenceViewController.h"
+#import "RGCRecommendTagsViewController.h"
 
 @interface RGCEssenceViewController ()
 
@@ -25,7 +26,11 @@
 }
 
 - (void)tagClick {
-    RGCLogFunc;
+    
+    RGCRecommendTagsViewController *tags = [[RGCRecommendTagsViewController alloc] init];
+    
+    [self.navigationController pushViewController:tags animated:YES];
+    
 }
 
 @end

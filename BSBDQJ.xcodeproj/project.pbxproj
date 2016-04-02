@@ -13,6 +13,10 @@
 		D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356461CACABE7004B3FFD /* RGCNavigationController.m */; };
 		D923564E1CAD0117004B3FFD /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D923564D1CAD0117004B3FFD /* Foundation+Log.m */; };
 		D92356511CAD0BB4004B3FFD /* RGCRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356501CAD0BB4004B3FFD /* RGCRecommendUser.m */; };
+		D92356571CAE7711004B3FFD /* RGCRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356561CAE7711004B3FFD /* RGCRecommendTagsViewController.m */; };
+		D92356631CAF6D74004B3FFD /* RGCRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356611CAF6D74004B3FFD /* RGCRecommendTagCell.m */; };
+		D92356641CAF6D74004B3FFD /* RGCRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92356621CAF6D74004B3FFD /* RGCRecommendTagCell.xib */; };
+		D92356671CB01928004B3FFD /* RGCRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356661CB01928004B3FFD /* RGCRecommendTag.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
 		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
 		D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A421CABC52000F409DD /* RGCMeViewController.m */; };
@@ -45,6 +49,13 @@
 		D923564D1CAD0117004B3FFD /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
 		D923564F1CAD0BB4004B3FFD /* RGCRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendUser.h; sourceTree = "<group>"; };
 		D92356501CAD0BB4004B3FFD /* RGCRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendUser.m; sourceTree = "<group>"; };
+		D92356551CAE7711004B3FFD /* RGCRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendTagsViewController.h; sourceTree = "<group>"; };
+		D92356561CAE7711004B3FFD /* RGCRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendTagsViewController.m; sourceTree = "<group>"; };
+		D92356601CAF6D74004B3FFD /* RGCRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendTagCell.h; sourceTree = "<group>"; };
+		D92356611CAF6D74004B3FFD /* RGCRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendTagCell.m; sourceTree = "<group>"; };
+		D92356621CAF6D74004B3FFD /* RGCRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCRecommendTagCell.xib; sourceTree = "<group>"; };
+		D92356651CB01928004B3FFD /* RGCRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendTag.h; sourceTree = "<group>"; };
+		D92356661CB01928004B3FFD /* RGCRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendTag.m; sourceTree = "<group>"; };
 		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
 		D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMainViewController.m; sourceTree = "<group>"; };
 		D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCEssenceViewController.h; sourceTree = "<group>"; };
@@ -163,6 +174,8 @@
 			children = (
 				D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */,
 				D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */,
+				D92356551CAE7711004B3FFD /* RGCRecommendTagsViewController.h */,
+				D92356561CAE7711004B3FFD /* RGCRecommendTagsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +183,8 @@
 		D9B48DAF1C97F54600D36FAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D92356651CB01928004B3FFD /* RGCRecommendTag.h */,
+				D92356661CB01928004B3FFD /* RGCRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +199,9 @@
 		D9B48DB11C97F54600D36FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D92356601CAF6D74004B3FFD /* RGCRecommendTagCell.h */,
+				D92356611CAF6D74004B3FFD /* RGCRecommendTagCell.m */,
+				D92356621CAF6D74004B3FFD /* RGCRecommendTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -464,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D92356641CAF6D74004B3FFD /* RGCRecommendTagCell.xib in Resources */,
 				D9B48DDD1C97FD3C00D36FAD /* RGCRecommendViewController.xib in Resources */,
 				D9B48DE51C98018500D36FAD /* RGCRecommendCategoryCell.xib in Resources */,
 				D9B48DD51C97F54600D36FAD /* RGCFriendTrendViewController.xib in Resources */,
@@ -529,6 +548,7 @@
 			files = (
 				D9B48DDC1C97FD3C00D36FAD /* RGCRecommendViewController.m in Sources */,
 				D9B48DE41C98018500D36FAD /* RGCRecommendCategoryCell.m in Sources */,
+				D92356671CB01928004B3FFD /* RGCRecommendTag.m in Sources */,
 				D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */,
 				D9B48DD31C97F54600D36FAD /* main.m in Sources */,
 				D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */,
@@ -538,9 +558,11 @@
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */,
+				D92356631CAF6D74004B3FFD /* RGCRecommendTagCell.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D92356511CAD0BB4004B3FFD /* RGCRecommendUser.m in Sources */,
 				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
+				D92356571CAE7711004B3FFD /* RGCRecommendTagsViewController.m in Sources */,
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
 				D9A89A461CABC52C00F409DD /* RGCNewViewController.m in Sources */,
 				D923564E1CAD0117004B3FFD /* Foundation+Log.m in Sources */,
