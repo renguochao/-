@@ -17,6 +17,9 @@
 		D92356631CAF6D74004B3FFD /* RGCRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356611CAF6D74004B3FFD /* RGCRecommendTagCell.m */; };
 		D92356641CAF6D74004B3FFD /* RGCRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92356621CAF6D74004B3FFD /* RGCRecommendTagCell.xib */; };
 		D92356671CB01928004B3FFD /* RGCRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356661CB01928004B3FFD /* RGCRecommendTag.m */; };
+		D923566E1CB19335004B3FFD /* RGCLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D923566C1CB19335004B3FFD /* RGCLoginRegisterViewController.m */; };
+		D923566F1CB19335004B3FFD /* RGCLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D923566D1CB19335004B3FFD /* RGCLoginRegisterViewController.xib */; };
+		D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356711CB19DD3004B3FFD /* RGCVerticalButton.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
 		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
 		D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A421CABC52000F409DD /* RGCMeViewController.m */; };
@@ -34,6 +37,7 @@
 		D9B48DE51C98018500D36FAD /* RGCRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B48DE31C98018500D36FAD /* RGCRecommendCategoryCell.xib */; };
 		D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DE71C9849FF00D36FAD /* RGCRecommendUserCell.m */; };
 		D9B48DEA1C9849FF00D36FAD /* RGCRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */; };
+		D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCA71CB21AC000F0AE14 /* RGCTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,11 @@
 		D92356621CAF6D74004B3FFD /* RGCRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCRecommendTagCell.xib; sourceTree = "<group>"; };
 		D92356651CB01928004B3FFD /* RGCRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendTag.h; sourceTree = "<group>"; };
 		D92356661CB01928004B3FFD /* RGCRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendTag.m; sourceTree = "<group>"; };
+		D923566B1CB19335004B3FFD /* RGCLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCLoginRegisterViewController.h; sourceTree = "<group>"; };
+		D923566C1CB19335004B3FFD /* RGCLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCLoginRegisterViewController.m; sourceTree = "<group>"; };
+		D923566D1CB19335004B3FFD /* RGCLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		D92356701CB19DD3004B3FFD /* RGCVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCVerticalButton.h; sourceTree = "<group>"; };
+		D92356711CB19DD3004B3FFD /* RGCVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCVerticalButton.m; sourceTree = "<group>"; };
 		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
 		D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMainViewController.m; sourceTree = "<group>"; };
 		D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCEssenceViewController.h; sourceTree = "<group>"; };
@@ -87,6 +96,8 @@
 		D9B48DE61C9849FF00D36FAD /* RGCRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCRecommendUserCell.h; sourceTree = "<group>"; };
 		D9B48DE71C9849FF00D36FAD /* RGCRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCRecommendUserCell.m; sourceTree = "<group>"; };
 		D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCRecommendUserCell.xib; sourceTree = "<group>"; };
+		D9BCFCA61CB21AC000F0AE14 /* RGCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTextField.h; sourceTree = "<group>"; };
+		D9BCFCA71CB21AC000F0AE14 /* RGCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +237,9 @@
 				D9B48DD91C97FD3C00D36FAD /* RGCRecommendViewController.h */,
 				D9B48DDA1C97FD3C00D36FAD /* RGCRecommendViewController.m */,
 				D9B48DDB1C97FD3C00D36FAD /* RGCRecommendViewController.xib */,
+				D923566B1CB19335004B3FFD /* RGCLoginRegisterViewController.h */,
+				D923566C1CB19335004B3FFD /* RGCLoginRegisterViewController.m */,
+				D923566D1CB19335004B3FFD /* RGCLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +271,10 @@
 				D9B48DE61C9849FF00D36FAD /* RGCRecommendUserCell.h */,
 				D9B48DE71C9849FF00D36FAD /* RGCRecommendUserCell.m */,
 				D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */,
+				D92356701CB19DD3004B3FFD /* RGCVerticalButton.h */,
+				D92356711CB19DD3004B3FFD /* RGCVerticalButton.m */,
+				D9BCFCA61CB21AC000F0AE14 /* RGCTextField.h */,
+				D9BCFCA71CB21AC000F0AE14 /* RGCTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D923566F1CB19335004B3FFD /* RGCLoginRegisterViewController.xib in Resources */,
 				D92356641CAF6D74004B3FFD /* RGCRecommendTagCell.xib in Resources */,
 				D9B48DDD1C97FD3C00D36FAD /* RGCRecommendViewController.xib in Resources */,
 				D9B48DE51C98018500D36FAD /* RGCRecommendCategoryCell.xib in Resources */,
@@ -547,8 +566,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B48DDC1C97FD3C00D36FAD /* RGCRecommendViewController.m in Sources */,
+				D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */,
 				D9B48DE41C98018500D36FAD /* RGCRecommendCategoryCell.m in Sources */,
 				D92356671CB01928004B3FFD /* RGCRecommendTag.m in Sources */,
+				D923566E1CB19335004B3FFD /* RGCLoginRegisterViewController.m in Sources */,
+				D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */,
 				D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */,
 				D9B48DD31C97F54600D36FAD /* main.m in Sources */,
 				D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */,

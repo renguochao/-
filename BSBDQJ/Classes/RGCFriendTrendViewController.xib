@@ -34,8 +34,8 @@
                         <constraint firstAttribute="height" constant="48" id="zmc-cS-NyH"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4K-oG-5It">
-                    <rect key="frame" x="201" y="379" width="200" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4K-oG-5It">
+                    <rect key="frame" x="200" y="379" width="200" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Fbc-Cc-72d"/>
                         <constraint firstAttribute="width" constant="200" id="gLg-bU-Ndd"/>
@@ -46,6 +46,9 @@
                     <state key="highlighted" backgroundImage="friendsTrend_login_click">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="loginRegister" destination="-1" eventType="touchUpInside" id="DBX-5w-FYF"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

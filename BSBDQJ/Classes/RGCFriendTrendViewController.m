@@ -8,6 +8,7 @@
 
 #import "RGCFriendTrendViewController.h"
 #import "RGCRecommendViewController.h"
+#import "RGCLoginRegisterViewController.h"
 
 @interface RGCFriendTrendViewController ()
 
@@ -36,4 +37,8 @@
     
 }
 
+- (IBAction)loginRegister {
+    RGCLoginRegisterViewController *loginRegister = [[RGCLoginRegisterViewController alloc] init];
+    [self.navigationController presentViewController:loginRegister animated:YES completion:nil];
+}
 @end
