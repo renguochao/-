@@ -38,6 +38,8 @@
 		D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B48DE71C9849FF00D36FAD /* RGCRecommendUserCell.m */; };
 		D9B48DEA1C9849FF00D36FAD /* RGCRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */; };
 		D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCA71CB21AC000F0AE14 /* RGCTextField.m */; };
+		D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */; };
+		D9BCFCAD1CB249D600F0AE14 /* RGCPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,9 @@
 		D9B48DE81C9849FF00D36FAD /* RGCRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCRecommendUserCell.xib; sourceTree = "<group>"; };
 		D9BCFCA61CB21AC000F0AE14 /* RGCTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTextField.h; sourceTree = "<group>"; };
 		D9BCFCA71CB21AC000F0AE14 /* RGCTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTextField.m; sourceTree = "<group>"; };
+		D9BCFCA91CB2495F00F0AE14 /* RGCPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCPushGuideView.h; sourceTree = "<group>"; };
+		D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCPushGuideView.m; sourceTree = "<group>"; };
+		D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCPushGuideView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +326,9 @@
 			children = (
 				D923563C1CAC01B6004B3FFD /* RGCTabBar.h */,
 				D923563D1CAC01B6004B3FFD /* RGCTabBar.m */,
+				D9BCFCA91CB2495F00F0AE14 /* RGCPushGuideView.h */,
+				D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */,
+				D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,6 +510,7 @@
 			files = (
 				D923566F1CB19335004B3FFD /* RGCLoginRegisterViewController.xib in Resources */,
 				D92356641CAF6D74004B3FFD /* RGCRecommendTagCell.xib in Resources */,
+				D9BCFCAD1CB249D600F0AE14 /* RGCPushGuideView.xib in Resources */,
 				D9B48DDD1C97FD3C00D36FAD /* RGCRecommendViewController.xib in Resources */,
 				D9B48DE51C98018500D36FAD /* RGCRecommendCategoryCell.xib in Resources */,
 				D9B48DD51C97F54600D36FAD /* RGCFriendTrendViewController.xib in Resources */,
@@ -583,6 +592,7 @@
 				D92356631CAF6D74004B3FFD /* RGCRecommendTagCell.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D92356511CAD0BB4004B3FFD /* RGCRecommendUser.m in Sources */,
+				D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */,
 				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
 				D92356571CAE7711004B3FFD /* RGCRecommendTagsViewController.m in Sources */,
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,

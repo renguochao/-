@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RGCMainViewController.h"
+#import "RGCPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,9 @@
     
     // 显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 显示推送引导
+    [RGCPushGuideView show];
     
     return YES;
 }
