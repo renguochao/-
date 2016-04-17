@@ -36,9 +36,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 初始化表格
+    [self setupTableView];
+    
     // 添加刷新控件
     [self setupRefresh];
+}
 
+- (void)setupTableView
+{
+    // 设置内边距
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = RGCTitlesViewY + RGCTitlesViewH;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    // 设置滚动条的内边距
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
 }
 
 - (void)setupRefresh {
@@ -149,6 +161,7 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    self.tableView.mj_footer.hidden = (self.topics.count == 0);
     return self.topics.count;
 }
 

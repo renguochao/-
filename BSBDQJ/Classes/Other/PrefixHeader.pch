@@ -11,6 +11,7 @@
 
 #import "UIView+RGCExtension.h"
 #import "UIBarButtonItem+RGCExtension.h"
+#import "RGCConst.h"
 
 #ifdef DEBUG
 #define RGCLog(...) NSLog(__VA_ARGS__)

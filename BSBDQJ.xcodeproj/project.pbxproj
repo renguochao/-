@@ -26,6 +26,7 @@
 		D97AE0231CC323CC00BDA689 /* RGCPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0221CC323CC00BDA689 /* RGCPictureViewController.m */; };
 		D97AE0261CC323D600BDA689 /* RGCWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0251CC323D600BDA689 /* RGCWordViewController.m */; };
 		D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */; };
+		D97AE02C1CC3E80400BDA689 /* RGCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE02B1CC3E80400BDA689 /* RGCConst.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
 		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
 		D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A421CABC52000F409DD /* RGCMeViewController.m */; };
@@ -85,6 +86,8 @@
 		D97AE0251CC323D600BDA689 /* RGCWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCWordViewController.m; sourceTree = "<group>"; };
 		D97AE0271CC3BF9D00BDA689 /* RGCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopic.h; sourceTree = "<group>"; };
 		D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopic.m; sourceTree = "<group>"; };
+		D97AE02A1CC3E80400BDA689 /* RGCConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCConst.h; sourceTree = "<group>"; };
+		D97AE02B1CC3E80400BDA689 /* RGCConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCConst.m; sourceTree = "<group>"; };
 		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
 		D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMainViewController.m; sourceTree = "<group>"; };
 		D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCEssenceViewController.h; sourceTree = "<group>"; };
@@ -453,6 +456,8 @@
 				D9B48DC81C97F54600D36FAD /* AppDelegate.m */,
 				D9B48DC91C97F54600D36FAD /* main.m */,
 				D9B48DCA1C97F54600D36FAD /* PrefixHeader.pch */,
+				D97AE02A1CC3E80400BDA689 /* RGCConst.h */,
+				D97AE02B1CC3E80400BDA689 /* RGCConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -631,6 +636,7 @@
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
 				D97AE0231CC323CC00BDA689 /* RGCPictureViewController.m in Sources */,
 				D97AE0201CC323BD00BDA689 /* RGCVoiceViewController.m in Sources */,
+				D97AE02C1CC3E80400BDA689 /* RGCConst.m in Sources */,
 				D9A89A461CABC52C00F409DD /* RGCNewViewController.m in Sources */,
 				D923564E1CAD0117004B3FFD /* Foundation+Log.m in Sources */,
 				D97AE0261CC323D600BDA689 /* RGCWordViewController.m in Sources */,
