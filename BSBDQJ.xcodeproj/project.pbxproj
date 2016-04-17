@@ -25,6 +25,7 @@
 		D97AE0201CC323BD00BDA689 /* RGCVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE01F1CC323BD00BDA689 /* RGCVoiceViewController.m */; };
 		D97AE0231CC323CC00BDA689 /* RGCPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0221CC323CC00BDA689 /* RGCPictureViewController.m */; };
 		D97AE0261CC323D600BDA689 /* RGCWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0251CC323D600BDA689 /* RGCWordViewController.m */; };
+		D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
 		D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */; };
 		D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A421CABC52000F409DD /* RGCMeViewController.m */; };
@@ -82,6 +83,8 @@
 		D97AE0221CC323CC00BDA689 /* RGCPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCPictureViewController.m; sourceTree = "<group>"; };
 		D97AE0241CC323D600BDA689 /* RGCWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCWordViewController.h; sourceTree = "<group>"; };
 		D97AE0251CC323D600BDA689 /* RGCWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCWordViewController.m; sourceTree = "<group>"; };
+		D97AE0271CC3BF9D00BDA689 /* RGCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopic.h; sourceTree = "<group>"; };
+		D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopic.m; sourceTree = "<group>"; };
 		D9A89A3B1CABC13100F409DD /* RGCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMainViewController.h; sourceTree = "<group>"; };
 		D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMainViewController.m; sourceTree = "<group>"; };
 		D9A89A3E1CABC4CD00F409DD /* RGCEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCEssenceViewController.h; sourceTree = "<group>"; };
@@ -226,6 +229,8 @@
 			children = (
 				D92356651CB01928004B3FFD /* RGCRecommendTag.h */,
 				D92356661CB01928004B3FFD /* RGCRecommendTag.m */,
+				D97AE0271CC3BF9D00BDA689 /* RGCTopic.h */,
+				D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -615,6 +620,7 @@
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */,
+				D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */,
 				D92356631CAF6D74004B3FFD /* RGCRecommendTagCell.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D92356511CAD0BB4004B3FFD /* RGCRecommendUser.m in Sources */,
