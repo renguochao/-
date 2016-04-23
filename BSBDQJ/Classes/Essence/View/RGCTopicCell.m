@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 /** 评论 */
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+@property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
 
 @end
 
@@ -38,25 +39,11 @@
     self.backgroundView = bgView;
 }
 
-/**
- 今年
-     今天
-         1分钟内
-         刚刚
-         1小时内
-         xx分钟前
-         其他
-         xx小时前
-     昨天
-         昨天 18:56:34
-     其他
-         06-23 19:56:23
- 
- 非今年
-     2014-05-08 18:45:30
- */
 - (void)setTopic:(RGCTopic *)topic {
     _topic = topic;
+    
+    // 新浪加V
+    self.sinaVView.hidden = !topic.isSina_v;
     
     // 设置其他控件
     [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];

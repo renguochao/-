@@ -29,7 +29,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zi-zP-jgd" userLabel="时间">
-                        <rect key="frame" x="53" y="28.5" width="31" height="14.5"/>
+                        <rect key="frame" x="53" y="28" width="31" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -143,9 +143,18 @@
                             <constraint firstItem="0oh-yh-ZVU" firstAttribute="leading" secondItem="mdY-0Y-paV" secondAttribute="leading" id="weS-L2-BOm"/>
                         </constraints>
                     </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="RAR-mL-pGC" userLabel="SinaV View">
+                        <rect key="frame" x="34" y="34" width="14" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="14" id="Ufx-PC-krU"/>
+                            <constraint firstAttribute="height" constant="14" id="tC8-bT-b8K"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="0Zi-zP-jgd" firstAttribute="bottom" secondItem="BF2-bT-2ur" secondAttribute="bottom" id="0oO-Pc-MKQ"/>
+                    <constraint firstItem="RAR-mL-pGC" firstAttribute="bottom" secondItem="BF2-bT-2ur" secondAttribute="bottom" constant="5" id="2Kl-Nk-bIe"/>
+                    <constraint firstItem="RAR-mL-pGC" firstAttribute="trailing" secondItem="BF2-bT-2ur" secondAttribute="trailing" constant="5" id="Gvj-aD-gW3"/>
                     <constraint firstItem="mdY-0Y-paV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="HWh-ns-KCB"/>
                     <constraint firstItem="0Zi-zP-jgd" firstAttribute="leading" secondItem="YFe-OD-6h4" secondAttribute="leading" id="W8y-vd-QMV"/>
                     <constraint firstItem="YFe-OD-6h4" firstAttribute="top" secondItem="BF2-bT-2ur" secondAttribute="top" id="f6x-nv-8vp"/>
@@ -166,11 +175,13 @@
                 <outlet property="nameLabel" destination="YFe-OD-6h4" id="5mQ-k5-60t"/>
                 <outlet property="profileImageView" destination="BF2-bT-2ur" id="mIO-1A-48p"/>
                 <outlet property="shareButton" destination="E8c-ba-cI0" id="YKB-gF-Tq9"/>
+                <outlet property="sinaVView" destination="RAR-mL-pGC" id="LQZ-Dr-pUO"/>
             </connections>
             <point key="canvasLocation" x="653" y="442.5"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Profile_AddV_authen" width="14" height="14"/>
         <image name="cell-button-line" width="1" height="29"/>
         <image name="cell-content-line" width="299" height="1"/>
         <image name="cellFollowClickIcon" width="19" height="20"/>
