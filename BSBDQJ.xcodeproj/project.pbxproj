@@ -20,6 +20,9 @@
 		D923566E1CB19335004B3FFD /* RGCLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D923566C1CB19335004B3FFD /* RGCLoginRegisterViewController.m */; };
 		D923566F1CB19335004B3FFD /* RGCLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D923566D1CB19335004B3FFD /* RGCLoginRegisterViewController.xib */; };
 		D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D92356711CB19DD3004B3FFD /* RGCVerticalButton.m */; };
+		D952953D1CCA09E80060A2AD /* RGCTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D952953B1CCA09E80060A2AD /* RGCTopicCell.m */; };
+		D952953E1CCA09E80060A2AD /* RGCTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952953C1CCA09E80060A2AD /* RGCTopicCell.xib */; };
+		D95295461CCBCCE00060A2AD /* NSDate+RGCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D95295451CCBCCE00060A2AD /* NSDate+RGCExtension.m */; };
 		D97AE01A1CC3239900BDA689 /* RGCAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0191CC3239900BDA689 /* RGCAllViewController.m */; };
 		D97AE01D1CC323AB00BDA689 /* RGCVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE01C1CC323AB00BDA689 /* RGCVideoViewController.m */; };
 		D97AE0201CC323BD00BDA689 /* RGCVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE01F1CC323BD00BDA689 /* RGCVoiceViewController.m */; };
@@ -74,6 +77,11 @@
 		D923566D1CB19335004B3FFD /* RGCLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		D92356701CB19DD3004B3FFD /* RGCVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCVerticalButton.h; sourceTree = "<group>"; };
 		D92356711CB19DD3004B3FFD /* RGCVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCVerticalButton.m; sourceTree = "<group>"; };
+		D952953A1CCA09E80060A2AD /* RGCTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicCell.h; sourceTree = "<group>"; };
+		D952953B1CCA09E80060A2AD /* RGCTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicCell.m; sourceTree = "<group>"; };
+		D952953C1CCA09E80060A2AD /* RGCTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicCell.xib; sourceTree = "<group>"; };
+		D95295441CCBCCE00060A2AD /* NSDate+RGCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+RGCExtension.h"; sourceTree = "<group>"; };
+		D95295451CCBCCE00060A2AD /* NSDate+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RGCExtension.m"; sourceTree = "<group>"; };
 		D97AE0181CC3239900BDA689 /* RGCAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCAllViewController.h; sourceTree = "<group>"; };
 		D97AE0191CC3239900BDA689 /* RGCAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCAllViewController.m; sourceTree = "<group>"; };
 		D97AE01B1CC323AB00BDA689 /* RGCVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCVideoViewController.h; sourceTree = "<group>"; };
@@ -251,6 +259,9 @@
 				D92356601CAF6D74004B3FFD /* RGCRecommendTagCell.h */,
 				D92356611CAF6D74004B3FFD /* RGCRecommendTagCell.m */,
 				D92356621CAF6D74004B3FFD /* RGCRecommendTagCell.xib */,
+				D952953A1CCA09E80060A2AD /* RGCTopicCell.h */,
+				D952953B1CCA09E80060A2AD /* RGCTopicCell.m */,
+				D952953C1CCA09E80060A2AD /* RGCTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,6 +480,8 @@
 				D9B48DCF1C97F54600D36FAD /* UIView+RGCExtension.m */,
 				D923563F1CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.h */,
 				D92356401CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m */,
+				D95295441CCBCCE00060A2AD /* NSDate+RGCExtension.h */,
+				D95295451CCBCCE00060A2AD /* NSDate+RGCExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -551,6 +564,7 @@
 				D9B48DD51C97F54600D36FAD /* RGCFriendTrendViewController.xib in Resources */,
 				D9B48D991C9457CD00D36FAD /* Assets.xcassets in Resources */,
 				D9B48DEA1C9849FF00D36FAD /* RGCRecommendUserCell.xib in Resources */,
+				D952953E1CCA09E80060A2AD /* RGCTopicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +627,7 @@
 				D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */,
 				D9B48DE41C98018500D36FAD /* RGCRecommendCategoryCell.m in Sources */,
 				D97AE01A1CC3239900BDA689 /* RGCAllViewController.m in Sources */,
+				D952953D1CCA09E80060A2AD /* RGCTopicCell.m in Sources */,
 				D92356671CB01928004B3FFD /* RGCRecommendTag.m in Sources */,
 				D923566E1CB19335004B3FFD /* RGCLoginRegisterViewController.m in Sources */,
 				D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */,
@@ -635,6 +650,7 @@
 				D92356571CAE7711004B3FFD /* RGCRecommendTagsViewController.m in Sources */,
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
 				D97AE0231CC323CC00BDA689 /* RGCPictureViewController.m in Sources */,
+				D95295461CCBCCE00060A2AD /* NSDate+RGCExtension.m in Sources */,
 				D97AE0201CC323BD00BDA689 /* RGCVoiceViewController.m in Sources */,
 				D97AE02C1CC3E80400BDA689 /* RGCConst.m in Sources */,
 				D9A89A461CABC52C00F409DD /* RGCNewViewController.m in Sources */,

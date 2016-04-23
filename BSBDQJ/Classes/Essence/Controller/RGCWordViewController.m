@@ -12,6 +12,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import "RGCTopic.h"
+#import "RGCTopicCell.h"
 
 @interface RGCWordViewController ()
 /** 帖子数据 */
@@ -43,6 +44,7 @@
     [self setupRefresh];
 }
 
+static NSString * const RGCTopicCellId = @"topic";
 - (void)setupTableView
 {
     // 设置内边距
@@ -51,6 +53,12 @@
     self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
     // 设置滚动条的内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
+    // 注册
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RGCTopicCell class]) bundle:nil] forCellReuseIdentifier:RGCTopicCellId];
 }
 
 - (void)setupRefresh {
@@ -167,20 +175,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *ID = @"cell";
+    RGCTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:RGCTopicCellId];
+    cell.topic = [self.topics objectAtIndex:indexPath.row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
-    RGCTopic *topic = [self.topics objectAtIndex:indexPath.row];
-    cell.textLabel.text = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    RGCTopic *topic = [self.topics objectAtIndex:indexPath.row];
+//    cell.textLabel.text = topic.name;
+//    cell.detailTextLabel.text = topic.text;
+//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
 }
 
 @end
