@@ -6,8 +6,8 @@
 //  Copyright © 2016年 RGC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RGCTopicViewController.h"
 
-@interface RGCVoiceViewController : UITableViewController
+@interface RGCVoiceViewController : RGCTopicViewController
 
 @end

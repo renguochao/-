@@ -25,7 +25,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 /** 评论 */
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+/** 新浪会员下标 */
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
+/** 帖子文字内容 */
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @end
 
@@ -56,6 +59,8 @@
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
     
+    // 设置帖子文字内容
+    self.contentLabel.text = topic.text;
 //    [self testDate:topic.create_time];
 }
 
@@ -87,12 +92,10 @@
 
 - (void)setFrame:(CGRect)frame {
     
-    static CGFloat margin = 10;
-    
-    frame.origin.x = margin;
-    frame.size.width -= 2 * margin;
-    frame.origin.y += margin;
-    frame.size.height -= margin;
+    frame.origin.x = RGCTopicCellMargin;
+    frame.size.width -= 2 * RGCTopicCellMargin;
+    frame.origin.y += RGCTopicCellMargin;
+    frame.size.height -= RGCTopicCellMargin;
     
     [super setFrame:frame];
 }

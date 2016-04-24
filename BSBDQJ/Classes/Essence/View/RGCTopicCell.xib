@@ -150,15 +150,24 @@
                             <constraint firstAttribute="height" constant="14" id="tC8-bT-b8K"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mg-aw-irO">
+                        <rect key="frame" x="8" y="53" width="304" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="0Zi-zP-jgd" firstAttribute="bottom" secondItem="BF2-bT-2ur" secondAttribute="bottom" id="0oO-Pc-MKQ"/>
                     <constraint firstItem="RAR-mL-pGC" firstAttribute="bottom" secondItem="BF2-bT-2ur" secondAttribute="bottom" constant="5" id="2Kl-Nk-bIe"/>
                     <constraint firstItem="RAR-mL-pGC" firstAttribute="trailing" secondItem="BF2-bT-2ur" secondAttribute="trailing" constant="5" id="Gvj-aD-gW3"/>
                     <constraint firstItem="mdY-0Y-paV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="HWh-ns-KCB"/>
+                    <constraint firstItem="0Mg-aw-irO" firstAttribute="trailing" secondItem="6MA-vq-FwZ" secondAttribute="trailing" id="Hjf-5d-aMp"/>
+                    <constraint firstItem="0Mg-aw-irO" firstAttribute="leading" secondItem="BF2-bT-2ur" secondAttribute="leading" id="JMi-wp-X38"/>
                     <constraint firstItem="0Zi-zP-jgd" firstAttribute="leading" secondItem="YFe-OD-6h4" secondAttribute="leading" id="W8y-vd-QMV"/>
                     <constraint firstItem="YFe-OD-6h4" firstAttribute="top" secondItem="BF2-bT-2ur" secondAttribute="top" id="f6x-nv-8vp"/>
                     <constraint firstItem="6MA-vq-FwZ" firstAttribute="top" secondItem="BF2-bT-2ur" secondAttribute="top" id="fbD-S9-E3J"/>
+                    <constraint firstItem="0Mg-aw-irO" firstAttribute="top" secondItem="BF2-bT-2ur" secondAttribute="bottom" constant="10" id="gqn-yo-PSW"/>
                     <constraint firstItem="6MA-vq-FwZ" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="jZy-mA-HJ2"/>
                     <constraint firstItem="BF2-bT-2ur" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="jvC-3G-N8c"/>
                     <constraint firstItem="YFe-OD-6h4" firstAttribute="leading" secondItem="BF2-bT-2ur" secondAttribute="trailing" constant="10" id="kXa-g2-kn5"/>
@@ -170,6 +179,7 @@
             <connections>
                 <outlet property="caiButton" destination="Tae-hM-xEe" id="AZa-Rb-KSZ"/>
                 <outlet property="commentButton" destination="R5T-fF-rw4" id="S8d-mv-5CT"/>
+                <outlet property="contentLabel" destination="0Mg-aw-irO" id="G9f-EQ-eCz"/>
                 <outlet property="createTimeLabel" destination="0Zi-zP-jgd" id="a16-xw-OjA"/>
                 <outlet property="dingButton" destination="Ll4-FR-hkY" id="sLQ-15-udJ"/>
                 <outlet property="nameLabel" destination="YFe-OD-6h4" id="5mQ-k5-60t"/>
