@@ -190,13 +190,7 @@ static NSString * const RGCTopicCellId = @"topic";
     // 取出帖子模型
     RGCTopic *topic = [self.topics objectAtIndex:indexPath.row];
     
-    // 文字frame属性
-    CGFloat textY = RGCTopicCellTextY;
-    CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
-    CGFloat textH = [topic.text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
-    CGFloat toolbarH = RGCTopicCellBottomBarH;
-    
-    return textY + textH + toolbarH + RGCTopicCellMargin + RGCTopicCellMargin;
+    return topic.cellHeight;
 }
 
 @end

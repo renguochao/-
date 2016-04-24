@@ -8,7 +8,9 @@
 
 #import "RGCTopic.h"
 
-@implementation RGCTopic
+@implementation RGCTopic {
+    CGFloat _cellHeight;
+}
 
 /**
  今年
@@ -58,4 +60,19 @@
     }
 }
 
+/** cell的高度 */
+- (CGFloat)cellHeight {
+    
+    if (!_cellHeight) {
+        // 文字frame属性
+        CGFloat textY = RGCTopicCellTextY;
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
+        CGFloat textH = [_text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
+        CGFloat toolbarH = RGCTopicCellBottomBarH;
+        
+        _cellHeight = textY + textH + toolbarH + RGCTopicCellMargin + RGCTopicCellMargin;
+    }
+    
+    return _cellHeight;
+}
 @end
