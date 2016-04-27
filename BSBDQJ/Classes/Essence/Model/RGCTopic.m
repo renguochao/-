@@ -7,9 +7,18 @@
 //
 
 #import "RGCTopic.h"
+#import <MJExtension.h>
 
 @implementation RGCTopic {
     CGFloat _cellHeight;
+}
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{
+             @"small_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
 }
 
 /**
@@ -66,11 +75,36 @@
     if (!_cellHeight) {
         // 文字frame属性
         CGFloat textY = RGCTopicCellTextY;
-        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 40, MAXFLOAT);
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * RGCTopicCellMargin, MAXFLOAT);
         CGFloat textH = [_text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size.height;
         CGFloat toolbarH = RGCTopicCellBottomBarH;
         
-        _cellHeight = textY + textH + toolbarH + RGCTopicCellMargin + RGCTopicCellMargin;
+//        _cellHeight = textY + textH + toolbarH + RGCTopicCellMargin + RGCTopicCellMargin;
+        // 文字部分高度
+        _cellHeight = textY + textH + RGCTopicCellMargin;
+        
+        // 根据段子类型计算cell的高度
+        if (self.type == RGCTopicTypePicture) {
+            // 图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            // 图片显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = RGCTopicCellMargin;
+            CGFloat pictureY = textY + textH + RGCTopicCellMargin;
+            _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            
+            _cellHeight += pictureH + RGCTopicCellMargin;
+            
+        } else if (self.type == RGCTopicTypeAll) {
+            
+        } else {
+            
+        }
+        
+        _cellHeight += toolbarH + RGCTopicCellMargin;
     }
     
     return _cellHeight;

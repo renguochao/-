@@ -94,6 +94,8 @@ static NSString * const RGCTopicCellId = @"topic";
             return;
         }
         
+        RGCLog(@"%@", responseObject[@"list"]);
+        
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
         

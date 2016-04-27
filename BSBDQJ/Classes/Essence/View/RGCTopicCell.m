@@ -8,6 +8,7 @@
 
 #import "RGCTopicCell.h"
 #import "RGCTopic.h"
+#import "RGCTopicPictureView.h"
 #import <UIImageView+WebCache.h>
 
 @interface RGCTopicCell()
@@ -29,10 +30,21 @@
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
 /** 帖子文字内容 */
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+/** 图片帖子中间的内容 */
+@property (nonatomic, weak) RGCTopicPictureView *pictureView;
 
 @end
 
 @implementation RGCTopicCell
+
+- (RGCTopicPictureView *)pictureView {
+    if (!_pictureView) {
+        RGCTopicPictureView *pictureView = [RGCTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -61,7 +73,15 @@
     
     // 设置帖子文字内容
     self.contentLabel.text = topic.text;
-//    [self testDate:topic.create_time];
+    
+    // 根据模型类型(帖子类型)添加对应的内容到cell的中间
+    if (topic.type == RGCTopicTypePicture) {
+        self.pictureView.topic = topic;
+        self.pictureView.frame = topic.pictureF;
+        self.pictureView.hidden = NO;
+    } else {
+        self.pictureView.hidden = YES;
+    }
 }
 
 - (void)testDate:(NSString *)create_time {

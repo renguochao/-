@@ -1,5 +1,13 @@
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger {
+    RGCTopicTypeAll = 1,
+    RGCTopicTypePicture = 10,
+    RGCTopicTypeWord = 29,
+    RGCTopicTypeVoice = 31,
+    RGCTopicTypeVideo = 41
+} RGCTopicType;
+
 /** 精华-所有顶部标题的高度 */
 UIKIT_EXTERN CGFloat const RGCTitlesViewH;
 /** 精华-所有顶部标题的y */

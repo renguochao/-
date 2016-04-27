@@ -24,6 +24,8 @@
 		D952953E1CCA09E80060A2AD /* RGCTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952953C1CCA09E80060A2AD /* RGCTopicCell.xib */; };
 		D95295461CCBCCE00060A2AD /* NSDate+RGCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D95295451CCBCCE00060A2AD /* NSDate+RGCExtension.m */; };
 		D95295491CCC5A760060A2AD /* RGCTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95295481CCC5A760060A2AD /* RGCTopicViewController.m */; };
+		D952954C1CCE169E0060A2AD /* RGCTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D952954B1CCE169D0060A2AD /* RGCTopicPictureView.m */; };
+		D952954E1CCE16AD0060A2AD /* RGCTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952954D1CCE16AD0060A2AD /* RGCTopicPictureView.xib */; };
 		D97AE01A1CC3239900BDA689 /* RGCAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0191CC3239900BDA689 /* RGCAllViewController.m */; };
 		D97AE01D1CC323AB00BDA689 /* RGCVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE01C1CC323AB00BDA689 /* RGCVideoViewController.m */; };
 		D97AE0201CC323BD00BDA689 /* RGCVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE01F1CC323BD00BDA689 /* RGCVoiceViewController.m */; };
@@ -85,6 +87,9 @@
 		D95295451CCBCCE00060A2AD /* NSDate+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+RGCExtension.m"; sourceTree = "<group>"; };
 		D95295471CCC5A760060A2AD /* RGCTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicViewController.h; sourceTree = "<group>"; };
 		D95295481CCC5A760060A2AD /* RGCTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicViewController.m; sourceTree = "<group>"; };
+		D952954A1CCE169D0060A2AD /* RGCTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicPictureView.h; sourceTree = "<group>"; };
+		D952954B1CCE169D0060A2AD /* RGCTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicPictureView.m; sourceTree = "<group>"; };
+		D952954D1CCE16AD0060A2AD /* RGCTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicPictureView.xib; sourceTree = "<group>"; };
 		D97AE0181CC3239900BDA689 /* RGCAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCAllViewController.h; sourceTree = "<group>"; };
 		D97AE0191CC3239900BDA689 /* RGCAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCAllViewController.m; sourceTree = "<group>"; };
 		D97AE01B1CC323AB00BDA689 /* RGCVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCVideoViewController.h; sourceTree = "<group>"; };
@@ -267,6 +272,9 @@
 				D952953A1CCA09E80060A2AD /* RGCTopicCell.h */,
 				D952953B1CCA09E80060A2AD /* RGCTopicCell.m */,
 				D952953C1CCA09E80060A2AD /* RGCTopicCell.xib */,
+				D952954A1CCE169D0060A2AD /* RGCTopicPictureView.h */,
+				D952954B1CCE169D0060A2AD /* RGCTopicPictureView.m */,
+				D952954D1CCE16AD0060A2AD /* RGCTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -569,6 +577,7 @@
 				D9B48DD51C97F54600D36FAD /* RGCFriendTrendViewController.xib in Resources */,
 				D9B48D991C9457CD00D36FAD /* Assets.xcassets in Resources */,
 				D9B48DEA1C9849FF00D36FAD /* RGCRecommendUserCell.xib in Resources */,
+				D952954E1CCE16AD0060A2AD /* RGCTopicPictureView.xib in Resources */,
 				D952953E1CCA09E80060A2AD /* RGCTopicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +647,7 @@
 				D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */,
 				D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */,
 				D9B48DD31C97F54600D36FAD /* main.m in Sources */,
+				D952954C1CCE169E0060A2AD /* RGCTopicPictureView.m in Sources */,
 				D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */,
 				D9B48DD61C97F54600D36FAD /* UIView+RGCExtension.m in Sources */,
 				D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */,
