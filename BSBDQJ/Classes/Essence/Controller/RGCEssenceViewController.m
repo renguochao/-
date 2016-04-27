@@ -8,11 +8,7 @@
 
 #import "RGCEssenceViewController.h"
 #import "RGCRecommendTagsViewController.h"
-#import "RGCAllViewController.h"
-#import "RGCVideoViewController.h"
-#import "RGCPictureViewController.h"
-#import "RGCWordViewController.h"
-#import "RGCVoiceViewController.h"
+#import "RGCTopicViewController.h"
 
 @interface RGCEssenceViewController () <UIScrollViewDelegate>
 /** 标签栏底部的指示器view */
@@ -49,25 +45,30 @@
  */
 - (void)setupChildVcs {
     
-    RGCWordViewController *word = [[RGCWordViewController alloc] init];
+    RGCTopicViewController *picture = [[RGCTopicViewController alloc] init];
+    picture.title = @"图片";
+    picture.type = RGCTopicTypePicture;
+    [self addChildViewController:picture];
+    
+    RGCTopicViewController *word = [[RGCTopicViewController alloc] init];
     word.title = @"段子";
+    word.type = RGCTopicTypeWord;
     [self addChildViewController:word];
     
-    RGCAllViewController *all = [[RGCAllViewController alloc] init];
+    RGCTopicViewController *all = [[RGCTopicViewController alloc] init];
     all.title = @"全部";
+    all.type = RGCTopicTypeAll;
     [self addChildViewController:all];
     
-    RGCVideoViewController *video = [[RGCVideoViewController alloc] init];
+    RGCTopicViewController *video = [[RGCTopicViewController alloc] init];
     video.title = @"视频";
+    video.type = RGCTopicTypeVideo;
     [self addChildViewController:video];
     
-    RGCVoiceViewController *voice = [[RGCVoiceViewController alloc] init];
+    RGCTopicViewController *voice = [[RGCTopicViewController alloc] init];
     voice.title = @"声音";
+    voice.type = RGCTopicTypeVoice;
     [self addChildViewController:voice];
-    
-    RGCPictureViewController *picture = [[RGCPictureViewController alloc] init];
-    picture.title = @"图片";
-    [self addChildViewController:picture];
     
 }
 
