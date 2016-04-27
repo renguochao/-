@@ -26,11 +26,7 @@
 		D95295491CCC5A760060A2AD /* RGCTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D95295481CCC5A760060A2AD /* RGCTopicViewController.m */; };
 		D952954C1CCE169E0060A2AD /* RGCTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = D952954B1CCE169D0060A2AD /* RGCTopicPictureView.m */; };
 		D952954E1CCE16AD0060A2AD /* RGCTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D952954D1CCE16AD0060A2AD /* RGCTopicPictureView.xib */; };
-		D97AE01A1CC3239900BDA689 /* RGCAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0191CC3239900BDA689 /* RGCAllViewController.m */; };
-		D97AE01D1CC323AB00BDA689 /* RGCVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE01C1CC323AB00BDA689 /* RGCVideoViewController.m */; };
-		D97AE0201CC323BD00BDA689 /* RGCVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE01F1CC323BD00BDA689 /* RGCVoiceViewController.m */; };
-		D97AE0231CC323CC00BDA689 /* RGCPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0221CC323CC00BDA689 /* RGCPictureViewController.m */; };
-		D97AE0261CC323D600BDA689 /* RGCWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0251CC323D600BDA689 /* RGCWordViewController.m */; };
+		D96E079B1CD0A5B700076AC3 /* RGCProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D96E079A1CD0A5B700076AC3 /* RGCProgressView.m */; };
 		D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */; };
 		D97AE02C1CC3E80400BDA689 /* RGCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE02B1CC3E80400BDA689 /* RGCConst.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
@@ -90,16 +86,8 @@
 		D952954A1CCE169D0060A2AD /* RGCTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicPictureView.h; sourceTree = "<group>"; };
 		D952954B1CCE169D0060A2AD /* RGCTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicPictureView.m; sourceTree = "<group>"; };
 		D952954D1CCE16AD0060A2AD /* RGCTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicPictureView.xib; sourceTree = "<group>"; };
-		D97AE0181CC3239900BDA689 /* RGCAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCAllViewController.h; sourceTree = "<group>"; };
-		D97AE0191CC3239900BDA689 /* RGCAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCAllViewController.m; sourceTree = "<group>"; };
-		D97AE01B1CC323AB00BDA689 /* RGCVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCVideoViewController.h; sourceTree = "<group>"; };
-		D97AE01C1CC323AB00BDA689 /* RGCVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCVideoViewController.m; sourceTree = "<group>"; };
-		D97AE01E1CC323BD00BDA689 /* RGCVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCVoiceViewController.h; sourceTree = "<group>"; };
-		D97AE01F1CC323BD00BDA689 /* RGCVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCVoiceViewController.m; sourceTree = "<group>"; };
-		D97AE0211CC323CC00BDA689 /* RGCPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCPictureViewController.h; sourceTree = "<group>"; };
-		D97AE0221CC323CC00BDA689 /* RGCPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCPictureViewController.m; sourceTree = "<group>"; };
-		D97AE0241CC323D600BDA689 /* RGCWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCWordViewController.h; sourceTree = "<group>"; };
-		D97AE0251CC323D600BDA689 /* RGCWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCWordViewController.m; sourceTree = "<group>"; };
+		D96E07991CD0A5B700076AC3 /* RGCProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCProgressView.h; sourceTree = "<group>"; };
+		D96E079A1CD0A5B700076AC3 /* RGCProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCProgressView.m; sourceTree = "<group>"; };
 		D97AE0271CC3BF9D00BDA689 /* RGCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopic.h; sourceTree = "<group>"; };
 		D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopic.m; sourceTree = "<group>"; };
 		D97AE02A1CC3E80400BDA689 /* RGCConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCConst.h; sourceTree = "<group>"; };
@@ -229,16 +217,6 @@
 				D9A89A3F1CABC4CD00F409DD /* RGCEssenceViewController.m */,
 				D92356551CAE7711004B3FFD /* RGCRecommendTagsViewController.h */,
 				D92356561CAE7711004B3FFD /* RGCRecommendTagsViewController.m */,
-				D97AE0181CC3239900BDA689 /* RGCAllViewController.h */,
-				D97AE0191CC3239900BDA689 /* RGCAllViewController.m */,
-				D97AE01B1CC323AB00BDA689 /* RGCVideoViewController.h */,
-				D97AE01C1CC323AB00BDA689 /* RGCVideoViewController.m */,
-				D97AE01E1CC323BD00BDA689 /* RGCVoiceViewController.h */,
-				D97AE01F1CC323BD00BDA689 /* RGCVoiceViewController.m */,
-				D97AE0211CC323CC00BDA689 /* RGCPictureViewController.h */,
-				D97AE0221CC323CC00BDA689 /* RGCPictureViewController.m */,
-				D97AE0241CC323D600BDA689 /* RGCWordViewController.h */,
-				D97AE0251CC323D600BDA689 /* RGCWordViewController.m */,
 				D95295471CCC5A760060A2AD /* RGCTopicViewController.h */,
 				D95295481CCC5A760060A2AD /* RGCTopicViewController.m */,
 			);
@@ -275,6 +253,8 @@
 				D952954A1CCE169D0060A2AD /* RGCTopicPictureView.h */,
 				D952954B1CCE169D0060A2AD /* RGCTopicPictureView.m */,
 				D952954D1CCE16AD0060A2AD /* RGCTopicPictureView.xib */,
+				D96E07991CD0A5B700076AC3 /* RGCProgressView.h */,
+				D96E079A1CD0A5B700076AC3 /* RGCProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -640,11 +620,11 @@
 				D9B48DDC1C97FD3C00D36FAD /* RGCRecommendViewController.m in Sources */,
 				D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */,
 				D9B48DE41C98018500D36FAD /* RGCRecommendCategoryCell.m in Sources */,
-				D97AE01A1CC3239900BDA689 /* RGCAllViewController.m in Sources */,
 				D952953D1CCA09E80060A2AD /* RGCTopicCell.m in Sources */,
 				D92356671CB01928004B3FFD /* RGCRecommendTag.m in Sources */,
 				D923566E1CB19335004B3FFD /* RGCLoginRegisterViewController.m in Sources */,
 				D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */,
+				D96E079B1CD0A5B700076AC3 /* RGCProgressView.m in Sources */,
 				D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */,
 				D9B48DD31C97F54600D36FAD /* main.m in Sources */,
 				D952954C1CCE169E0060A2AD /* RGCTopicPictureView.m in Sources */,
@@ -661,17 +641,13 @@
 				D92356511CAD0BB4004B3FFD /* RGCRecommendUser.m in Sources */,
 				D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */,
 				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
-				D97AE01D1CC323AB00BDA689 /* RGCVideoViewController.m in Sources */,
 				D92356571CAE7711004B3FFD /* RGCRecommendTagsViewController.m in Sources */,
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
-				D97AE0231CC323CC00BDA689 /* RGCPictureViewController.m in Sources */,
 				D95295461CCBCCE00060A2AD /* NSDate+RGCExtension.m in Sources */,
-				D97AE0201CC323BD00BDA689 /* RGCVoiceViewController.m in Sources */,
 				D97AE02C1CC3E80400BDA689 /* RGCConst.m in Sources */,
 				D9A89A461CABC52C00F409DD /* RGCNewViewController.m in Sources */,
 				D95295491CCC5A760060A2AD /* RGCTopicViewController.m in Sources */,
 				D923564E1CAD0117004B3FFD /* Foundation+Log.m in Sources */,
-				D97AE0261CC323D600BDA689 /* RGCWordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
