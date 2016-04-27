@@ -38,6 +38,15 @@
     // 设置gif是否隐藏
     NSString *extension = topic.large_image.pathExtension;
     self.gifView.hidden = ![extension.lowercaseString isEqualToString:@"gif"];
+    
+    // 判断是否显示『点击查看大图』
+    if (topic.isBigPicture) {
+        self.seeBigButton.hidden = NO;
+        self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    } else {
+        self.seeBigButton.hidden = YES;
+        self.imageView.contentMode = UIViewContentModeScaleToFill;
+    }
 }
 
 @end

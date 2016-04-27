@@ -11,3 +11,8 @@ CGFloat const RGCTopicCellMargin = 10;
 CGFloat const RGCTopicCellTextY = 55;
 /** 精华-cell-底部工具条高度 */
 CGFloat const RGCTopicCellBottomBarH = 44;
+
+/** 精华-cell-图片帖子的最大高度 */
+CGFloat const RGCTopicCellPictureMaxH = 1000;
+/** 精华-cell-图片帖子一旦超过最大高度，就用break */
+CGFloat const RGCTopicCellPictureBreakH = 250;

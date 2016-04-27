@@ -11,6 +11,7 @@
 
 @implementation RGCTopic {
     CGFloat _cellHeight;
+    BOOL _bigPicture;
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
@@ -89,12 +90,15 @@
             CGFloat pictureW = maxSize.width;
             // 图片显示出来的高度
             CGFloat pictureH = pictureW * self.height / self.width;
+            if (pictureH >= RGCTopicCellPictureMaxH) { // 图片高度过长
+                pictureH = RGCTopicCellPictureBreakH;
+                self.bigPicture = YES; // 大图
+            }
             
             // 计算图片控件的frame
             CGFloat pictureX = RGCTopicCellMargin;
             CGFloat pictureY = textY + textH + RGCTopicCellMargin;
             _pictureF = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-            
             
             _cellHeight += pictureH + RGCTopicCellMargin;
             
