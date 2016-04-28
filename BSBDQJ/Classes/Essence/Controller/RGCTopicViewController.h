@@ -11,5 +11,5 @@
 @interface RGCTopicViewController : UITableViewController
 
 /** 帖子类型(交给子类去实现) */
-- (NSString *)type;
+@property (nonatomic, assign) RGCTopicType type;
 @end

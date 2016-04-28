@@ -84,7 +84,7 @@ static NSString * const RGCTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     self.params = params;
     
     // 发送请求
@@ -132,7 +132,7 @@ static NSString * const RGCTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     params[@"page"] = @(self.page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;

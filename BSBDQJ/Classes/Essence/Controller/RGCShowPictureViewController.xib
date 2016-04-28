@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RGCShowPictureViewController">
+            <connections>
+                <outlet property="scrollView" destination="xAz-5T-KT2" id="10X-Iq-YGL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-5T-KT2">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-dE-Bp6" userLabel="转发">
+                    <rect key="frame" x="425" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.50916637073863635" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="0hW-Kh-8YU"/>
+                        <constraint firstAttribute="width" constant="70" id="cew-vX-96h"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HI4-zZ-VST" userLabel="返回">
+                    <rect key="frame" x="15" y="40" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="81o-c3-Fux"/>
+                        <constraint firstAttribute="height" constant="35" id="HqT-WO-DFT"/>
+                        <constraint firstAttribute="width" constant="35" id="g5g-MS-TDO"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="uRV-oL-oXr"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="show_image_back_icon"/>
+                    <connections>
+                        <action selector="back" destination="-1" eventType="touchUpInside" id="pTs-9E-cWp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3A-45-k3p" userLabel="保存">
+                    <rect key="frame" x="510" y="555" width="70" height="25"/>
+                    <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="0.48075727982954547" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="AKt-iD-ZCR"/>
+                        <constraint firstAttribute="width" constant="70" id="Xge-C3-asS"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="QDz-JG-1tw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xAz-5T-KT2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1TY-x8-DBY"/>
+                <constraint firstAttribute="bottom" secondItem="xAz-5T-KT2" secondAttribute="bottom" id="IaG-yF-6Qb"/>
+                <constraint firstAttribute="trailing" secondItem="I3A-45-k3p" secondAttribute="trailing" constant="20" id="V3r-kZ-cHV"/>
+                <constraint firstAttribute="trailing" secondItem="xAz-5T-KT2" secondAttribute="trailing" id="W7W-Sh-OBF"/>
+                <constraint firstAttribute="bottom" secondItem="I3A-45-k3p" secondAttribute="bottom" constant="20" id="eyO-T5-5Zd"/>
+                <constraint firstItem="xe8-dE-Bp6" firstAttribute="bottom" secondItem="I3A-45-k3p" secondAttribute="bottom" id="gHi-f0-PUX"/>
+                <constraint firstItem="HI4-zZ-VST" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="hVB-5a-GqA"/>
+                <constraint firstItem="xe8-dE-Bp6" firstAttribute="trailing" secondItem="I3A-45-k3p" secondAttribute="leading" constant="-15" id="kHf-Wp-Vl0"/>
+                <constraint firstItem="xAz-5T-KT2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nGp-nr-9a1"/>
+                <constraint firstItem="HI4-zZ-VST" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="yz3-5y-Mfn"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>
