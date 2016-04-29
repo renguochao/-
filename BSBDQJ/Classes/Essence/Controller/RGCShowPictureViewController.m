@@ -8,12 +8,14 @@
 
 #import "RGCShowPictureViewController.h"
 #import "RGCTopic.h"
+#import "RGCProgressView.h"
 #import <UIImageView+WebCache.h>
 #import <SVProgressHUD.h>
 
 @interface RGCShowPictureViewController ()
 @property (weak, nonatomic) UIImageView *imageView;
 
+@property (weak, nonatomic) IBOutlet RGCProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
@@ -45,10 +47,18 @@
     } else {
         self.imageView.size = CGSizeMake(pictureW, pictureH);
         self.imageView.centerY = screenH * 0.5;
-        
     }
     
-    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image]];
+    // 立即显示当前图片的下载进度
+    [self.progressView setProgress:self.topic.pictureProgress animated:YES];
+    
+    // 下载图片
+    [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        self.topic.pictureProgress = 1.0 * receivedSize / expectedSize;
+        [self.progressView setProgress:self.topic.pictureProgress animated:YES];
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        self.progressView.hidden = YES;
+    }];
 }
 
 - (IBAction)back {
@@ -56,6 +66,12 @@
 }
 
 - (IBAction)save:(id)sender {
+    
+    if (self.imageView.image == nil) {
+        [SVProgressHUD showErrorWithStatus:@"图片尚未下载完毕，请稍后!"];
+        return;
+    }
+    
     // 将图片写入相册
     UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 }

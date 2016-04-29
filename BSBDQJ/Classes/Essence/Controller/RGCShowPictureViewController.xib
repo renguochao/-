@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RGCShowPictureViewController">
             <connections>
+                <outlet property="progressView" destination="jQb-q0-2JE" id="6wh-Wb-n09"/>
                 <outlet property="scrollView" destination="xAz-5T-KT2" id="10X-Iq-YGL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -60,11 +61,20 @@
                         <action selector="save:" destination="-1" eventType="touchUpInside" id="QDz-JG-1tw"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-q0-2JE" customClass="RGCProgressView">
+                    <rect key="frame" x="250" y="250" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="clb-v4-Qt3"/>
+                        <constraint firstAttribute="height" constant="100" id="g80-HF-3U2"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="xAz-5T-KT2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1TY-x8-DBY"/>
                 <constraint firstAttribute="bottom" secondItem="xAz-5T-KT2" secondAttribute="bottom" id="IaG-yF-6Qb"/>
+                <constraint firstItem="jQb-q0-2JE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Oeu-WE-xzy"/>
                 <constraint firstAttribute="trailing" secondItem="I3A-45-k3p" secondAttribute="trailing" constant="20" id="V3r-kZ-cHV"/>
                 <constraint firstAttribute="trailing" secondItem="xAz-5T-KT2" secondAttribute="trailing" id="W7W-Sh-OBF"/>
                 <constraint firstAttribute="bottom" secondItem="I3A-45-k3p" secondAttribute="bottom" constant="20" id="eyO-T5-5Zd"/>
@@ -72,6 +82,7 @@
                 <constraint firstItem="HI4-zZ-VST" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="hVB-5a-GqA"/>
                 <constraint firstItem="xe8-dE-Bp6" firstAttribute="trailing" secondItem="I3A-45-k3p" secondAttribute="leading" constant="-15" id="kHf-Wp-Vl0"/>
                 <constraint firstItem="xAz-5T-KT2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nGp-nr-9a1"/>
+                <constraint firstItem="jQb-q0-2JE" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xOq-LO-CCJ"/>
                 <constraint firstItem="HI4-zZ-VST" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="yz3-5y-Mfn"/>
             </constraints>
         </view>

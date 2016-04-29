@@ -46,11 +46,14 @@
 - (void)setTopic:(RGCTopic *)topic {
     _topic = topic;
     
+    // 立即显示最新的进度值
+    [self.progressView setProgress:topic.pictureProgress animated:NO];
+    
     // 设置图片
     [self.imageView sd_setImageWithURL:[NSURL URLWithString:topic.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
-        CGFloat progress = 1.0 * receivedSize / expectedSize;
-        [self.progressView setProgress:progress animated:YES];
+        topic.pictureProgress = 1.0 * receivedSize / expectedSize;
+        [self.progressView setProgress:topic.pictureProgress animated:YES];
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
     }];
