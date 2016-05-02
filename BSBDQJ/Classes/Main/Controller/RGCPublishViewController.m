@@ -10,6 +10,9 @@
 #import "RGCVerticalButton.h"
 #import <POP.h>
 
+static CGFloat const RGCAnimationDelay = 0.05;
+static CGFloat const RGCSpringFactor = 5;
+
 @interface RGCPublishViewController ()
 @property (nonatomic, weak) UIImageView *sloganView;
 @end
@@ -19,12 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 添加标语
-    UIImageView *sloganView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_slogan"]];
-    sloganView.y = RGCScreenH * 0.2;
-    sloganView.centerX = RGCScreenW * 0.5;
-    [self.view addSubview:sloganView];
-    self.sloganView = sloganView;
+    // 动画加载过程中让view不能被点击
+    self.view.userInteractionEnabled = NO;
     
     // 数据
     NSArray *images = @[@"publish-video", @"publish-picture", @"publish-text", @"publish-audio", @"publish-review", @"publish-offline"];
@@ -44,16 +43,49 @@
         [button setTitle:titles[i] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:images[i]] forState:UIControlStateNormal];
+        [self.view addSubview:button];
         
-        // 设置frame
-        button.width = buttonW;
-        button.height = buttonH;
+        // 计算button动画的x、y值
         int row = i / maxCols;
         int col = i % maxCols;
-        button.x = buttonStartX + col * (xMargin + buttonW);
-        button.y = buttonStartY + row * buttonH;
-        [self.view addSubview:button];
+        CGFloat buttonX = buttonStartX + col * (xMargin + buttonW);
+        CGFloat buttonEndY = buttonStartY + row * buttonH;
+        CGFloat buttonBeginY = buttonEndY - RGCScreenH;
+        
+        // 按钮动画
+        POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewFrame];
+        anim.fromValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonBeginY, buttonW, buttonH)];
+        anim.toValue = [NSValue valueWithCGRect:CGRectMake(buttonX, buttonEndY, buttonW, buttonH)];
+        anim.springSpeed = RGCSpringFactor;
+        anim.springBounciness = RGCSpringFactor;
+        anim.beginTime = CACurrentMediaTime() + RGCAnimationDelay * i;
+        [anim setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+            
+        }];
+        [button pop_addAnimation:anim forKey:nil];
     }
+    
+    // 添加标语
+    UIImageView *sloganView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"app_slogan"]];
+    [self.view addSubview:sloganView];
+    self.sloganView = sloganView;
+    
+    // 标语动画
+    CGFloat sloganCenterX = RGCScreenW * 0.5;
+    CGFloat sloganCenterEndY = RGCScreenH * 0.2;
+    CGFloat sloganCenterBeginY = sloganCenterEndY - RGCScreenH;
+    
+    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
+    anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(sloganCenterX, sloganCenterBeginY)];
+    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(sloganCenterX, sloganCenterEndY)];
+    anim.springBounciness = RGCSpringFactor;
+    anim.springSpeed = RGCSpringFactor;
+    anim.beginTime = CACurrentMediaTime() + RGCAnimationDelay * images.count;
+    [anim setCompletionBlock:^(POPAnimation *anim, BOOL completed) {
+        // 标语动画执行结束，恢复点击事件
+        self.view.userInteractionEnabled = YES;
+    }];
+    [self.sloganView pop_addAnimation:anim forKey:nil];
 }
 
 - (IBAction)cancel:(id)sender {
@@ -62,19 +94,19 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
-    
-    // 设置开始时间
-    anim.beginTime = CACurrentMediaTime() + 0.5;
-    anim.springBounciness = 10;
-    anim.springSpeed = 10;
-    anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(100, 100)];
-    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(300, 300)];
-    anim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
-        
-    };
-    
-    [self.sloganView pop_addAnimation:anim forKey:nil];
+//    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
+//    
+//    // 设置开始时间
+//    anim.beginTime = CACurrentMediaTime() + 0.5;
+//    anim.springBounciness = 10;
+//    anim.springSpeed = 10;
+//    anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(100, 100)];
+//    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(300, 300)];
+//    anim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+//        
+//    };
+//    
+//    [self.sloganView pop_addAnimation:anim forKey:nil];
 }
 
 
