@@ -15,9 +15,15 @@ static CGFloat const RGCSpringFactor = 5;
 
 @interface RGCPublishViewController ()
 @property (nonatomic, weak) UIImageView *sloganView;
+
+//@property (nonatomic, copy) void (^completionBlock)(int a, int b);
 @end
 
 @implementation RGCPublishViewController
+
+//- (void)test:(int (^)())completionBlock {
+//    
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +44,8 @@ static CGFloat const RGCSpringFactor = 5;
     CGFloat xMargin = (RGCScreenW - 2 * buttonStartX - maxCols * buttonW) / (maxCols - 1);
     for (int i = 0; i<images.count; i++) {
         RGCVerticalButton *button = [[RGCVerticalButton alloc] init];
+        button.tag = i;
+        [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
         // 设置内容
         button.titleLabel.font = [UIFont systemFontOfSize:14];
         [button setTitle:titles[i] forState:UIControlStateNormal];
@@ -88,11 +96,63 @@ static CGFloat const RGCSpringFactor = 5;
     [self.sloganView pop_addAnimation:anim forKey:nil];
 }
 
-- (IBAction)cancel:(id)sender {
-    
-    [self dismissViewControllerAnimated:NO completion:nil];
+- (void)buttonClick:(UIButton *)button {
+    [self cancelWithCompletionBlock:^{
+        if (button.tag == 0) {
+            RGCLog(@"发视频");
+        } else if (button.tag == 1) {
+            RGCLog(@"发图片");
+        }
+    }];
 }
 
+- (IBAction)cancel:(id)sender {
+    
+    [self cancelWithCompletionBlock:nil];
+    
+}
+
+- (void)cancelWithCompletionBlock:(void (^)())completionBlock {
+    
+    // 动画加载过程中让view不能被点击
+    self.view.userInteractionEnabled = NO;
+    
+    int beginIndex = 2;
+    NSInteger count = self.view.subviews.count - 1;
+//    for (int i = beginIndex; i < self.view.subviews.count; i ++) {
+    for (NSInteger i = count; i >= beginIndex; i --) {
+
+        UIView *subview = self.view.subviews[i];
+        
+        // 基本动画
+        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
+        CGFloat centerY = subview.centerY + RGCScreenH;
+        // 动画执行节奏
+        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        anim.toValue = [NSValue valueWithCGPoint:CGPointMake(subview.centerX, centerY)];
+        anim.beginTime = CACurrentMediaTime() + (count - i) * RGCAnimationDelay;
+        [subview pop_addAnimation:anim forKey:nil];
+        
+        // 监听最后一个动画
+        if (i == beginIndex) {
+            [anim setCompletionBlock:^(POPAnimation *anim, BOOL completed) {
+                [self dismissViewControllerAnimated:NO completion:nil];
+                
+                !completionBlock ? : completionBlock();
+            }];
+        }
+    }
+    
+}
+
+/**
+ pop和Core Animation的区别
+ 1.Core Animation的动画只能添加到layer上
+ 2.pop的动画能添加到任何对象
+ 3.pop的底层并非基于Core Animation, 是基于CADisplayLink
+ 4.Core Animation的动画仅仅是表象, 并不会真正修改对象的frame\size等值
+ 5.pop的动画实时修改对象的属性, 真正地修改了对象的属性
+ */
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
 //    
@@ -107,6 +167,16 @@ static CGFloat const RGCSpringFactor = 5;
 //    };
 //    
 //    [self.sloganView pop_addAnimation:anim forKey:nil];
+    
+    
+//    POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewCenter];
+//    CGFloat centerY = self.sloganView.centerY + RGCScreenH * 0.5;
+//    anim.beginTime = CACurrentMediaTime() + 0.5;
+//    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(self.sloganView.centerX, centerY)];
+//    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+//    [self.sloganView pop_addAnimation:anim forKey:nil];
+    
+    [self cancelWithCompletionBlock:nil];
 }
 
 

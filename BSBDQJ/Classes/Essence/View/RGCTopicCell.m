@@ -52,6 +52,9 @@
     UIImageView *bgView = [[UIImageView alloc] init];
     bgView.image = [UIImage imageNamed:@"mainCellBackground"];
     self.backgroundView = bgView;
+    
+    self.contentView.backgroundColor = [UIColor whiteColor];
+    self.contentLabel.backgroundColor = self.contentView.backgroundColor;
 }
 
 - (void)setTopic:(RGCTopic *)topic {
