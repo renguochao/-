@@ -53,6 +53,8 @@
 		D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCA71CB21AC000F0AE14 /* RGCTextField.m */; };
 		D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */; };
 		D9BCFCAD1CB249D600F0AE14 /* RGCPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */; };
+		D9E75AAD1CE34BD2001F6A9F /* RGCTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */; };
+		D9E75AAF1CE34BEA001F6A9F /* RGCTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +140,9 @@
 		D9BCFCA91CB2495F00F0AE14 /* RGCPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCPushGuideView.h; sourceTree = "<group>"; };
 		D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCPushGuideView.m; sourceTree = "<group>"; };
 		D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCPushGuideView.xib; sourceTree = "<group>"; };
+		D9E75AAB1CE34BD2001F6A9F /* RGCTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicVoiceView.h; sourceTree = "<group>"; };
+		D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicVoiceView.m; sourceTree = "<group>"; };
+		D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicVoiceView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +273,9 @@
 				D952954D1CCE16AD0060A2AD /* RGCTopicPictureView.xib */,
 				D96E07991CD0A5B700076AC3 /* RGCProgressView.h */,
 				D96E079A1CD0A5B700076AC3 /* RGCProgressView.m */,
+				D9E75AAB1CE34BD2001F6A9F /* RGCTopicVoiceView.h */,
+				D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */,
+				D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -575,6 +583,7 @@
 				D9B48DD51C97F54600D36FAD /* RGCFriendTrendViewController.xib in Resources */,
 				D9B48D991C9457CD00D36FAD /* Assets.xcassets in Resources */,
 				D9B48DEA1C9849FF00D36FAD /* RGCRecommendUserCell.xib in Resources */,
+				D9E75AAF1CE34BEA001F6A9F /* RGCTopicVoiceView.xib in Resources */,
 				D952954E1CCE16AD0060A2AD /* RGCTopicPictureView.xib in Resources */,
 				D952953E1CCA09E80060A2AD /* RGCTopicCell.xib in Resources */,
 				D96F8D8D1CD35363005E9D70 /* RGCPublishViewController.xib in Resources */,
@@ -654,6 +663,7 @@
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D96E079F1CD0B78900076AC3 /* RGCShowPictureViewController.m in Sources */,
+				D9E75AAD1CE34BD2001F6A9F /* RGCTopicVoiceView.m in Sources */,
 				D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */,
 				D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */,
 				D92356631CAF6D74004B3FFD /* RGCRecommendTagCell.m in Sources */,

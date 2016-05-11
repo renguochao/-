@@ -9,6 +9,7 @@
 #import "RGCTopicCell.h"
 #import "RGCTopic.h"
 #import "RGCTopicPictureView.h"
+#import "RGCTopicVoiceView.h"
 #import <UIImageView+WebCache.h>
 
 @interface RGCTopicCell()
@@ -32,7 +33,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 /** 图片帖子中间的内容 */
 @property (nonatomic, weak) RGCTopicPictureView *pictureView;
-
+/** 声音帖子中间的内容 */
+@property (nonatomic, weak) RGCTopicVoiceView *voiceView;
 @end
 
 @implementation RGCTopicCell
@@ -44,6 +46,15 @@
         _pictureView = pictureView;
     }
     return _pictureView;
+}
+
+- (RGCTopicVoiceView *)voiceView {
+    if (!_voiceView) {
+        RGCTopicVoiceView *voiceView = [RGCTopicVoiceView voiceView];
+        [self.contentView addSubview:voiceView];
+        _voiceView = voiceView;
+    }
+    return _voiceView;
 }
 
 - (void)awakeFromNib {
@@ -82,8 +93,14 @@
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
         self.pictureView.hidden = NO;
-    } else {
+        self.voiceView.hidden = YES;
+    } else if (topic.type == RGCTopicTypeVoice) {
+        self.voiceView.topic = topic;
+        self.voiceView.frame = topic.voiceF;
+        self.voiceView.hidden = NO;
         self.pictureView.hidden = YES;
+    } else {
+        
     }
 }
 

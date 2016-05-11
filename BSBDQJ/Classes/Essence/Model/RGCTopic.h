@@ -41,13 +41,18 @@
 @property (nonatomic, assign) NSInteger is_gif;
 /** 是否为新浪加V用户 */
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
-
+/** 音频时长 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
 /****** 额外的辅助属性 ******/
 
 /** cell的高度 */
 @property (nonatomic, assign, readonly) CGFloat cellHeight;
 /** 图片控件的frame */
 @property (nonatomic, assign, readonly) CGRect pictureF;
+/** 声音控件的frame */
+@property (nonatomic, assign, readonly) CGRect voiceF;
 /** 图片是否太大 */
 @property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
 

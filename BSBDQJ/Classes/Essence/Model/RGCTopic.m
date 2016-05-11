@@ -85,7 +85,7 @@
         _cellHeight = textY + textH + RGCTopicCellMargin;
         
         // 根据段子类型计算cell的高度
-        if (self.type == RGCTopicTypePicture) {
+        if (self.type == RGCTopicTypePicture) { // 图片帖子
             // 图片显示出来的宽度
             CGFloat pictureW = maxSize.width;
             // 图片显示出来的高度
@@ -102,7 +102,15 @@
             
             _cellHeight += pictureH + RGCTopicCellMargin;
             
-        } else if (self.type == RGCTopicTypeAll) {
+        } else if (self.type == RGCTopicTypeVoice) { // 声音帖子
+            
+            CGFloat voiceX = RGCTopicCellMargin;
+            CGFloat voiceY = textY + textH + RGCTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceF = CGRectMake(voiceX, voiceY, voiceW, voiceH);
+            
+            _cellHeight += voiceH + RGCTopicCellMargin;
             
         } else {
             
