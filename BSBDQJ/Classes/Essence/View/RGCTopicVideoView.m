@@ -1,26 +1,26 @@
 //
-//  RGCTopicVoiceView.m
+//  RGCTopicVideoView.m
 //  BSBDQJ
 //
 //  Created by rgc on 16/5/11.
 //  Copyright © 2016年 RGC. All rights reserved.
 //
 
-#import "RGCTopicVoiceView.h"
+#import "RGCTopicVideoView.h"
 #import "RGCTopic.h"
 #import "RGCShowPictureViewController.h"
 #import <UIImageView+WebCache.h>
 
-@interface RGCTopicVoiceView()
+@interface RGCTopicVideoView()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UILabel *voicetimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *videotimeLabel;
 
 @end
 
-@implementation RGCTopicVoiceView
+@implementation RGCTopicVideoView
 
-+ (instancetype)voiceView {
++ (instancetype)videoView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] lastObject];
 }
 
@@ -57,7 +57,8 @@
     NSInteger minutes = topic.voicetime / 60;
     NSInteger seconds = topic.voicetime % 60;
     
-    self.voicetimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minutes, seconds];
+    self.videotimeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd", minutes, seconds];
+    
 }
 
 @end

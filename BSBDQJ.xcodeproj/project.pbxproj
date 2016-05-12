@@ -55,6 +55,8 @@
 		D9BCFCAD1CB249D600F0AE14 /* RGCPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */; };
 		D9E75AAD1CE34BD2001F6A9F /* RGCTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */; };
 		D9E75AAF1CE34BEA001F6A9F /* RGCTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */; };
+		D9E75AB21CE3690F001F6A9F /* RGCTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */; };
+		D9E75AB41CE3691A001F6A9F /* RGCTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +145,9 @@
 		D9E75AAB1CE34BD2001F6A9F /* RGCTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicVoiceView.h; sourceTree = "<group>"; };
 		D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicVoiceView.m; sourceTree = "<group>"; };
 		D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicVoiceView.xib; sourceTree = "<group>"; };
+		D9E75AB01CE3690F001F6A9F /* RGCTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicVideoView.h; sourceTree = "<group>"; };
+		D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicVideoView.m; sourceTree = "<group>"; };
+		D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicVideoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +281,9 @@
 				D9E75AAB1CE34BD2001F6A9F /* RGCTopicVoiceView.h */,
 				D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */,
 				D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */,
+				D9E75AB01CE3690F001F6A9F /* RGCTopicVideoView.h */,
+				D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */,
+				D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +595,7 @@
 				D952954E1CCE16AD0060A2AD /* RGCTopicPictureView.xib in Resources */,
 				D952953E1CCA09E80060A2AD /* RGCTopicCell.xib in Resources */,
 				D96F8D8D1CD35363005E9D70 /* RGCPublishViewController.xib in Resources */,
+				D9E75AB41CE3691A001F6A9F /* RGCTopicVideoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +667,7 @@
 				D952954C1CCE169E0060A2AD /* RGCTopicPictureView.m in Sources */,
 				D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */,
 				D9B48DD61C97F54600D36FAD /* UIView+RGCExtension.m in Sources */,
+				D9E75AB21CE3690F001F6A9F /* RGCTopicVideoView.m in Sources */,
 				D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */,
 				D9B48DE01C97FF2900D36FAD /* RGCRecommendCategory.m in Sources */,
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,

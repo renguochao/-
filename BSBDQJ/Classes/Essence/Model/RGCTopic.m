@@ -112,8 +112,14 @@
             
             _cellHeight += voiceH + RGCTopicCellMargin;
             
-        } else {
+        } else if (self.type == RGCTopicTypeVideo) {
+            CGFloat videoX = RGCTopicCellMargin;
+            CGFloat videoY = textY + textH + RGCTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoF = CGRectMake(videoX, videoY, videoW, videoH);
             
+            _cellHeight += videoH + RGCTopicCellMargin;
         }
         
         _cellHeight += toolbarH + RGCTopicCellMargin;

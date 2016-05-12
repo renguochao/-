@@ -45,16 +45,6 @@
  */
 - (void)setupChildVcs {
     
-    RGCTopicViewController *picture = [[RGCTopicViewController alloc] init];
-    picture.title = @"图片";
-    picture.type = RGCTopicTypePicture;
-    [self addChildViewController:picture];
-    
-    RGCTopicViewController *word = [[RGCTopicViewController alloc] init];
-    word.title = @"段子";
-    word.type = RGCTopicTypeWord;
-    [self addChildViewController:word];
-    
     RGCTopicViewController *all = [[RGCTopicViewController alloc] init];
     all.title = @"全部";
     all.type = RGCTopicTypeAll;
@@ -69,6 +59,16 @@
     voice.title = @"声音";
     voice.type = RGCTopicTypeVoice;
     [self addChildViewController:voice];
+    
+    RGCTopicViewController *picture = [[RGCTopicViewController alloc] init];
+    picture.title = @"图片";
+    picture.type = RGCTopicTypePicture;
+    [self addChildViewController:picture];
+    
+    RGCTopicViewController *word = [[RGCTopicViewController alloc] init];
+    word.title = @"段子";
+    word.type = RGCTopicTypeWord;
+    [self addChildViewController:word];
     
 }
 

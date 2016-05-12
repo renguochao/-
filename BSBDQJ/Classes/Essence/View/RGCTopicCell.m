@@ -10,6 +10,7 @@
 #import "RGCTopic.h"
 #import "RGCTopicPictureView.h"
 #import "RGCTopicVoiceView.h"
+#import "RGCTopicVideoView.h"
 #import <UIImageView+WebCache.h>
 
 @interface RGCTopicCell()
@@ -35,6 +36,8 @@
 @property (nonatomic, weak) RGCTopicPictureView *pictureView;
 /** 声音帖子中间的内容 */
 @property (nonatomic, weak) RGCTopicVoiceView *voiceView;
+/** 视频帖子中间的内容 */
+@property (nonatomic, weak) RGCTopicVideoView *videoView;
 @end
 
 @implementation RGCTopicCell
@@ -55,6 +58,15 @@
         _voiceView = voiceView;
     }
     return _voiceView;
+}
+
+- (RGCTopicVideoView *)videoView {
+    if (!_videoView) {
+        RGCTopicVideoView *videoView = [RGCTopicVideoView videoView];
+        [self.contentView addSubview:videoView];
+        _videoView = videoView;
+    }
+    return _videoView;
 }
 
 - (void)awakeFromNib {
@@ -89,18 +101,28 @@
     self.contentLabel.text = topic.text;
     
     // 根据模型类型(帖子类型)添加对应的内容到cell的中间
-    if (topic.type == RGCTopicTypePicture) {
+    if (topic.type == RGCTopicTypePicture) { // 图片帖子
         self.pictureView.topic = topic;
         self.pictureView.frame = topic.pictureF;
         self.pictureView.hidden = NO;
         self.voiceView.hidden = YES;
-    } else if (topic.type == RGCTopicTypeVoice) {
+        self.videoView.hidden = YES;
+    } else if (topic.type == RGCTopicTypeVoice) { // 音频帖子
         self.voiceView.topic = topic;
         self.voiceView.frame = topic.voiceF;
         self.voiceView.hidden = NO;
         self.pictureView.hidden = YES;
-    } else {
-        
+        self.videoView.hidden = YES;
+    } else if(topic.type == RGCTopicTypeVideo) { // 视频帖子
+        self.videoView.topic = topic;
+        self.videoView.frame = topic.videoF;
+        self.videoView.hidden = NO;
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
+    } else { // 段子帖子
+        self.videoView.hidden = YES;
+        self.pictureView.hidden = YES;
+        self.voiceView.hidden = YES;
     }
 }
 
