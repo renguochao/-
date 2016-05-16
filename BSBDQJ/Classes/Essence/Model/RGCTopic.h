@@ -47,6 +47,8 @@
 @property (nonatomic, assign) NSInteger playcount;
 /** 视频时长 */
 @property (nonatomic, assign) NSInteger videotime;
+/** 热门评论（数组中存放的是RGCComment模型） */
+@property (nonatomic, strong) NSArray *top_cmt;
 /****** 额外的辅助属性 ******/
 
 /** cell的高度 */

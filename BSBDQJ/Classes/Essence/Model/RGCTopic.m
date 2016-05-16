@@ -7,6 +7,8 @@
 //
 
 #import "RGCTopic.h"
+#import "RGCUser.h"
+#import "RGCComment.h"
 #import <MJExtension.h>
 
 @implementation RGCTopic {
@@ -20,6 +22,11 @@
              @"large_image" : @"image1",
              @"middle_image" : @"image2"
              };
+}
+
++ (NSDictionary *)mj_objectClassInArray {
+    //    return @{@"top_cmt" : [RGCComment class]};
+    return @{@"top_cmt" : @"RGCComment"};
 }
 
 /**
@@ -120,6 +127,14 @@
             _videoF = CGRectMake(videoX, videoY, videoW, videoH);
             
             _cellHeight += videoH + RGCTopicCellMargin;
+        }
+        
+        // 如果有最热评论
+        RGCComment *cmt = [self.top_cmt firstObject];
+        if (cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += RGCTopicCellTopCmtTitleH + contentH + RGCTopicCellMargin;
         }
         
         _cellHeight += toolbarH + RGCTopicCellMargin;

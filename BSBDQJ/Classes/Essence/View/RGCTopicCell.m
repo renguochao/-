@@ -8,6 +8,8 @@
 
 #import "RGCTopicCell.h"
 #import "RGCTopic.h"
+#import "RGCComment.h"
+#import "RGCUser.h"
 #import "RGCTopicPictureView.h"
 #import "RGCTopicVoiceView.h"
 #import "RGCTopicVideoView.h"
@@ -38,6 +40,10 @@
 @property (nonatomic, weak) RGCTopicVoiceView *voiceView;
 /** 视频帖子中间的内容 */
 @property (nonatomic, weak) RGCTopicVideoView *videoView;
+/** 最热评论的内容 */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtContentLabel;
+/** 最热评论的整体 */
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 @end
 
 @implementation RGCTopicCell
@@ -124,6 +130,16 @@
         self.pictureView.hidden = YES;
         self.voiceView.hidden = YES;
     }
+    
+    // 处理最热评论
+    RGCComment *cmt = [topic.top_cmt firstObject];
+    if (cmt) {
+        self.topCmtView.hidden = NO;
+        self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+    } else {
+        self.topCmtView.hidden = YES;
+    }
+    
 }
 
 - (void)testDate:(NSString *)create_time {

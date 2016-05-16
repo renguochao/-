@@ -24,3 +24,10 @@ UIKIT_EXTERN CGFloat const RGCTopicCellBottomBarH;
 UIKIT_EXTERN CGFloat const RGCTopicCellPictureMaxH;
 /** 精华-cell-图片帖子一旦超过最大高度，就用break */
 UIKIT_EXTERN CGFloat const RGCTopicCellPictureBreakH;
+
+/** RGCUser模型-性别属性值 */
+UIKIT_EXTERN NSString * const RGCUserSexMale;
+UIKIT_EXTERN NSString * const RGCUserSexFemale;
+
+/** 精华-cell-最热评论标题高度 */
+UIKIT_EXTERN CGFloat const RGCTopicCellTopCmtTitleH;

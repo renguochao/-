@@ -57,6 +57,8 @@
 		D9E75AAF1CE34BEA001F6A9F /* RGCTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */; };
 		D9E75AB21CE3690F001F6A9F /* RGCTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */; };
 		D9E75AB41CE3691A001F6A9F /* RGCTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */; };
+		D9E75AB71CE41B54001F6A9F /* RGCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB61CE41B54001F6A9F /* RGCUser.m */; };
+		D9E75ABA1CE41C77001F6A9F /* RGCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB91CE41C77001F6A9F /* RGCComment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +150,10 @@
 		D9E75AB01CE3690F001F6A9F /* RGCTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicVideoView.h; sourceTree = "<group>"; };
 		D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicVideoView.m; sourceTree = "<group>"; };
 		D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicVideoView.xib; sourceTree = "<group>"; };
+		D9E75AB51CE41B54001F6A9F /* RGCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCUser.h; sourceTree = "<group>"; };
+		D9E75AB61CE41B54001F6A9F /* RGCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCUser.m; sourceTree = "<group>"; };
+		D9E75AB81CE41C77001F6A9F /* RGCComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCComment.h; sourceTree = "<group>"; };
+		D9E75AB91CE41C77001F6A9F /* RGCComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCComment.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +259,10 @@
 				D92356661CB01928004B3FFD /* RGCRecommendTag.m */,
 				D97AE0271CC3BF9D00BDA689 /* RGCTopic.h */,
 				D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */,
+				D9E75AB51CE41B54001F6A9F /* RGCUser.h */,
+				D9E75AB61CE41B54001F6A9F /* RGCUser.m */,
+				D9E75AB81CE41C77001F6A9F /* RGCComment.h */,
+				D9E75AB91CE41C77001F6A9F /* RGCComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -658,6 +668,7 @@
 				D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */,
 				D9B48DE41C98018500D36FAD /* RGCRecommendCategoryCell.m in Sources */,
 				D952953D1CCA09E80060A2AD /* RGCTopicCell.m in Sources */,
+				D9E75ABA1CE41C77001F6A9F /* RGCComment.m in Sources */,
 				D92356671CB01928004B3FFD /* RGCRecommendTag.m in Sources */,
 				D923566E1CB19335004B3FFD /* RGCLoginRegisterViewController.m in Sources */,
 				D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */,
@@ -669,6 +680,7 @@
 				D9B48DD61C97F54600D36FAD /* UIView+RGCExtension.m in Sources */,
 				D9E75AB21CE3690F001F6A9F /* RGCTopicVideoView.m in Sources */,
 				D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */,
+				D9E75AB71CE41B54001F6A9F /* RGCUser.m in Sources */,
 				D9B48DE01C97FF2900D36FAD /* RGCRecommendCategory.m in Sources */,
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
