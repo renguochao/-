@@ -59,6 +59,8 @@
 		D9E75AB41CE3691A001F6A9F /* RGCTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */; };
 		D9E75AB71CE41B54001F6A9F /* RGCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB61CE41B54001F6A9F /* RGCUser.m */; };
 		D9E75ABA1CE41C77001F6A9F /* RGCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB91CE41C77001F6A9F /* RGCComment.m */; };
+		D9EF57E31CE9C1CB0025BD6D /* RGCCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9EF57E11CE9C1CB0025BD6D /* RGCCommentViewController.m */; };
+		D9EF57E41CE9C1CB0025BD6D /* RGCCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9EF57E21CE9C1CB0025BD6D /* RGCCommentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -154,6 +156,9 @@
 		D9E75AB61CE41B54001F6A9F /* RGCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCUser.m; sourceTree = "<group>"; };
 		D9E75AB81CE41C77001F6A9F /* RGCComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCComment.h; sourceTree = "<group>"; };
 		D9E75AB91CE41C77001F6A9F /* RGCComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCComment.m; sourceTree = "<group>"; };
+		D9EF57E01CE9C1CB0025BD6D /* RGCCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCCommentViewController.h; sourceTree = "<group>"; };
+		D9EF57E11CE9C1CB0025BD6D /* RGCCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCCommentViewController.m; sourceTree = "<group>"; };
+		D9EF57E21CE9C1CB0025BD6D /* RGCCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCCommentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +253,9 @@
 				D96E079C1CD0B78900076AC3 /* RGCShowPictureViewController.h */,
 				D96E079D1CD0B78900076AC3 /* RGCShowPictureViewController.m */,
 				D96E079E1CD0B78900076AC3 /* RGCShowPictureViewController.xib */,
+				D9EF57E01CE9C1CB0025BD6D /* RGCCommentViewController.h */,
+				D9EF57E11CE9C1CB0025BD6D /* RGCCommentViewController.m */,
+				D9EF57E21CE9C1CB0025BD6D /* RGCCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -604,6 +612,7 @@
 				D9E75AAF1CE34BEA001F6A9F /* RGCTopicVoiceView.xib in Resources */,
 				D952954E1CCE16AD0060A2AD /* RGCTopicPictureView.xib in Resources */,
 				D952953E1CCA09E80060A2AD /* RGCTopicCell.xib in Resources */,
+				D9EF57E41CE9C1CB0025BD6D /* RGCCommentViewController.xib in Resources */,
 				D96F8D8D1CD35363005E9D70 /* RGCPublishViewController.xib in Resources */,
 				D9E75AB41CE3691A001F6A9F /* RGCTopicVideoView.xib in Resources */,
 			);
@@ -701,6 +710,7 @@
 				D9A89A461CABC52C00F409DD /* RGCNewViewController.m in Sources */,
 				D95295491CCC5A760060A2AD /* RGCTopicViewController.m in Sources */,
 				D923564E1CAD0117004B3FFD /* Foundation+Log.m in Sources */,
+				D9EF57E31CE9C1CB0025BD6D /* RGCCommentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

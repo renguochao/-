@@ -48,6 +48,10 @@
 
 @implementation RGCTopicCell
 
++ (instancetype)cell {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 - (RGCTopicPictureView *)pictureView {
     if (!_pictureView) {
         RGCTopicPictureView *pictureView = [RGCTopicPictureView pictureView];
@@ -173,7 +177,8 @@
     frame.origin.x = RGCTopicCellMargin;
     frame.size.width -= 2 * RGCTopicCellMargin;
     frame.origin.y += RGCTopicCellMargin;
-    frame.size.height -= RGCTopicCellMargin;
+//    frame.size.height -= RGCTopicCellMargin;
+    frame.size.height = self.topic.cellHeight - RGCTopicCellMargin;
     
     [super setFrame:frame];
 }

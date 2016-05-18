@@ -1,16 +1,15 @@
 //
-//  RGCTopicCell.h
+//  RGCCommentViewController.h
 //  BSBDQJ
 //
-//  Created by rgc on 16/4/22.
+//  Created by rgc on 16/5/16.
 //  Copyright © 2016年 RGC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+
 @class RGCTopic;
-@interface RGCTopicCell : UITableViewCell
+@interface RGCCommentViewController : UIViewController
 
 @property (nonatomic, strong) RGCTopic *topic;
-
-+ (instancetype)cell;
 @end

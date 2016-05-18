@@ -13,6 +13,7 @@
 #import <MJRefresh.h>
 #import "RGCTopic.h"
 #import "RGCTopicCell.h"
+#import "RGCCommentViewController.h"
 
 @interface RGCTopicViewController ()
 /** 帖子数据 */
@@ -94,7 +95,7 @@ static NSString * const RGCTopicCellId = @"topic";
             return;
         }
         
-        RGCLog(@"%@", responseObject[@"list"]);
+//        RGCLog(@"%@", responseObject[@"list"]);
         
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
@@ -188,11 +189,18 @@ static NSString * const RGCTopicCellId = @"topic";
     return cell;
 }
 
+#pragma mark - 代理方法
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     // 取出帖子模型
     RGCTopic *topic = [self.topics objectAtIndex:indexPath.row];
     
     return topic.cellHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    RGCCommentViewController *commentVc = [[RGCCommentViewController alloc] init];
+    commentVc.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
 }
 
 @end
