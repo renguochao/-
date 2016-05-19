@@ -9,14 +9,30 @@
 #import "RGCCommentViewController.h"
 #import "RGCTopicCell.h"
 #import "RGCTopic.h"
+#import "RGCComment.h"
+#import <MJRefresh.h>
+#import <AFNetworking.h>
+#import <MJExtension.h>
 
 @interface RGCCommentViewController () <UITableViewDelegate, UITableViewDataSource>
 /** 工具条底部间距 */
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomSpace;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+/** 最热评论 */
+@property (nonatomic, strong) NSArray *hotComments;
+/** 最新评论 */
+@property (nonatomic, strong) NSMutableArray *latestComments;
 @end
 
 @implementation RGCCommentViewController
+
+- (NSMutableArray *)latestComments {
+    if (!_latestComments) {
+        _latestComments = [NSMutableArray array];
+    }
+    return _latestComments;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +40,38 @@
     [self setupBasics];
     
     [self setupHeader];
+    
+    [self setupRefresh];
+}
+
+- (void)setupRefresh {
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+}
+
+- (void)loadNewComments {
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"hot"] = @"1";
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        // 最热评论
+        self.hotComments = [RGCComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
+        
+        // 最新评论
+        self.latestComments = [RGCComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        
+        [self.tableView reloadData];
+        
+        [self.tableView.mj_header endRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_header endRefreshing];
+    }];
 }
 
 - (void)setupHeader {
@@ -73,6 +121,25 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+/**
+ *  返回section组的评论数据
+ *
+ *  @param section 组号
+ *
+ *  @return 该组号里面的评论数据
+ */
+- (NSArray *)commentsInSection:(NSInteger)section {
+    if (section == 0) {
+        return self.hotComments.count ? self.hotComments : self.latestComments;
+    }
+    
+    return self.latestComments;
+}
+
+- (RGCComment *)commentInIndexPath:(NSIndexPath *)indexPath {
+    return [self commentsInSection:indexPath.section][indexPath.row];
+}
+
 #pragma mark - <UITableViewDelegate>
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     [self.view endEditing:YES];
@@ -81,16 +148,58 @@
 #pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    NSInteger hotCount = self.hotComments.count;
+    NSInteger latestCount = self.latestComments.count;
+    
+    if (hotCount) return 2; // 有"最热评论" + "最新评论" 2组
+    if (latestCount) return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    NSInteger hotCount = self.hotComments.count;
+    NSInteger latestCount = self.latestComments.count;
+    
+    if (section == 0) {
+        return hotCount ? hotCount : latestCount;
+    } else {
+        return latestCount;
+    }
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"热门";
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    // 创建header
+    UIView *header = [[UIView alloc] init];
+    header.backgroundColor = RGCGlobalBg;
+    
+    // 创建label
+    UILabel *label = [[UILabel alloc] init];
+    label.textColor = RGCColor(67, 67, 67);
+    label.width = 200;
+    label.x = RGCTopicCellMargin;
+    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    [header addSubview:label];
+    
+    // 设置文字
+    NSInteger hotCount = self.hotComments.count;
+    if (section == 0) {
+        label.text = hotCount ? @"最热评论" : @"最新评论";
+    } else {
+        label.text = @"最新评论";
+    }
+    
+    return header;
 }
+
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    NSInteger hotCount = self.hotComments.count;
+//    
+//    if (section == 0) {
+//        return hotCount ? @"最热评论" : @"最新评论";
+//    } else {
+//        return @"最新评论";
+//    }
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
@@ -99,7 +208,8 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
     }
     
-    cell.textLabel.text = @"1";
+    RGCComment *comment = [self commentInIndexPath:indexPath];
+    cell.textLabel.text = comment.content;
     return cell;
 }
 
