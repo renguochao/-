@@ -10,9 +10,12 @@
 #import "RGCTopicCell.h"
 #import "RGCTopic.h"
 #import "RGCComment.h"
+#import "RGCCommentHeaderView.h"
 #import <MJRefresh.h>
 #import <AFNetworking.h>
 #import <MJExtension.h>
+
+//static NSInteger const RGCHeaderLabelTag = 99;
 
 @interface RGCCommentViewController () <UITableViewDelegate, UITableViewDataSource>
 /** 工具条底部间距 */
@@ -168,28 +171,77 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    // 创建header
-    UIView *header = [[UIView alloc] init];
-    header.backgroundColor = RGCGlobalBg;
+    // 先从缓存池中找header
+    RGCCommentHeaderView *header = [RGCCommentHeaderView headerViewWithTabelView:tableView];
     
-    // 创建label
-    UILabel *label = [[UILabel alloc] init];
-    label.textColor = RGCColor(67, 67, 67);
-    label.width = 200;
-    label.x = RGCTopicCellMargin;
-    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-    [header addSubview:label];
-    
-    // 设置文字
+    // 设置label数据
     NSInteger hotCount = self.hotComments.count;
     if (section == 0) {
-        label.text = hotCount ? @"最热评论" : @"最新评论";
+        header.title = hotCount ? @"最热评论" : @"最新评论";
     } else {
-        label.text = @"最新评论";
+        header.title = @"最新评论";
     }
-    
     return header;
 }
+
+
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    
+//    static NSString *ID = @"header";
+//    // 先从缓存池中找header
+//    UITableViewHeaderFooterView *header = [tableView dequeueReusableHeaderFooterViewWithIdentifier:ID];
+//    
+//    UILabel *label = nil;
+//    
+//    if (header == nil) { // 缓存池中没有，自己创建
+//        header = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:ID];
+//        header.contentView.backgroundColor = RGCGlobalBg;
+//        // 创建label
+//        label = [[UILabel alloc] init];
+//        label.textColor = RGCColor(67, 67, 67);
+//        label.width = 200;
+//        label.x = RGCTopicCellMargin;
+//        label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//        label.tag = RGCHeaderLabelTag;
+//        [header.contentView addSubview:label];
+//    } else { // 从缓存池中取出来的
+//        label = [header viewWithTag:RGCHeaderLabelTag];
+//    }
+//    
+//    // 设置label数据
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = hotCount ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//    
+//    return header;
+//}
+
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    // 创建header
+//    UIView *header = [[UIView alloc] init];
+//    header.backgroundColor = RGCGlobalBg;
+//    
+//    // 创建label
+//    UILabel *label = [[UILabel alloc] init];
+//    label.textColor = RGCColor(67, 67, 67);
+//    label.width = 200;
+//    label.x = RGCTopicCellMargin;
+//    label.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+//    [header addSubview:label];
+//    
+//    // 设置文字
+//    NSInteger hotCount = self.hotComments.count;
+//    if (section == 0) {
+//        label.text = hotCount ? @"最热评论" : @"最新评论";
+//    } else {
+//        label.text = @"最新评论";
+//    }
+//    
+//    return header;
+//}
 
 //- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
 //    NSInteger hotCount = self.hotComments.count;

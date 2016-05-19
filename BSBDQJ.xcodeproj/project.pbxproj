@@ -53,6 +53,7 @@
 		D9BCFCA81CB21AC000F0AE14 /* RGCTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCA71CB21AC000F0AE14 /* RGCTextField.m */; };
 		D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */; };
 		D9BCFCAD1CB249D600F0AE14 /* RGCPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */; };
+		D9C212A01CEDB4AC00B04E78 /* RGCCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C2129F1CEDB4AC00B04E78 /* RGCCommentHeaderView.m */; };
 		D9E75AAD1CE34BD2001F6A9F /* RGCTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */; };
 		D9E75AAF1CE34BEA001F6A9F /* RGCTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */; };
 		D9E75AB21CE3690F001F6A9F /* RGCTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */; };
@@ -146,6 +147,8 @@
 		D9BCFCA91CB2495F00F0AE14 /* RGCPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCPushGuideView.h; sourceTree = "<group>"; };
 		D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCPushGuideView.m; sourceTree = "<group>"; };
 		D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCPushGuideView.xib; sourceTree = "<group>"; };
+		D9C2129E1CEDB4AC00B04E78 /* RGCCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCCommentHeaderView.h; sourceTree = "<group>"; };
+		D9C2129F1CEDB4AC00B04E78 /* RGCCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCCommentHeaderView.m; sourceTree = "<group>"; };
 		D9E75AAB1CE34BD2001F6A9F /* RGCTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicVoiceView.h; sourceTree = "<group>"; };
 		D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicVoiceView.m; sourceTree = "<group>"; };
 		D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicVoiceView.xib; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 				D9E75AB01CE3690F001F6A9F /* RGCTopicVideoView.h */,
 				D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */,
 				D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */,
+				D9C2129E1CEDB4AC00B04E78 /* RGCCommentHeaderView.h */,
+				D9C2129F1CEDB4AC00B04E78 /* RGCCommentHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -702,6 +707,7 @@
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D92356511CAD0BB4004B3FFD /* RGCRecommendUser.m in Sources */,
 				D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */,
+				D9C212A01CEDB4AC00B04E78 /* RGCCommentHeaderView.m in Sources */,
 				D9A89A431CABC52000F409DD /* RGCMeViewController.m in Sources */,
 				D92356571CAE7711004B3FFD /* RGCRecommendTagsViewController.m in Sources */,
 				D9A89A401CABC4CD00F409DD /* RGCEssenceViewController.m in Sources */,
