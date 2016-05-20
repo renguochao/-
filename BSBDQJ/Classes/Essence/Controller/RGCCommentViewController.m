@@ -26,6 +26,8 @@
 @property (nonatomic, strong) NSArray *hotComments;
 /** 最新评论 */
 @property (nonatomic, strong) NSMutableArray *latestComments;
+/** 保存帖子的top_cmt */
+@property (nonatomic, strong) RGCComment *saved_top_cmt;
 @end
 
 @implementation RGCCommentViewController
@@ -81,6 +83,13 @@
     // 创建header
     UIView *header = [[UIView alloc] init];
     
+    // 清空top_cmt
+    if (self.topic.top_cmt) {
+        self.saved_top_cmt = self.topic.top_cmt;
+        self.topic.top_cmt = nil;
+        [self.topic setValue:@0 forKey:@"cellHeight"];
+    }
+    
     RGCTopicCell *cell = [RGCTopicCell cell];
     cell.topic = self.topic;
     cell.size = CGSizeMake(RGCScreenW, self.topic.cellHeight);
@@ -122,6 +131,12 @@
 - (void)dealloc {
     // 控制器销毁时需要
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    // 恢复帖子的top_cmt
+    if (self.saved_top_cmt) {
+        self.topic.top_cmt = self.saved_top_cmt;
+        [self.topic setValue:@0 forKey:@"cellHeight"];
+    }
 }
 
 /**

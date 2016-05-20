@@ -136,7 +136,7 @@
     }
     
     // 处理最热评论
-    RGCComment *cmt = [topic.top_cmt firstObject];
+    RGCComment *cmt = topic.top_cmt;
     if (cmt) {
         self.topCmtView.hidden = NO;
         self.topCmtContentLabel.text = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];

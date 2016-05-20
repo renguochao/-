@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class RGCComment;
+
 @interface RGCTopic : NSObject
 /** id */
 @property (nonatomic, copy) NSString *ID;
@@ -50,7 +52,10 @@
 /** 视频时长 */
 @property (nonatomic, assign) NSInteger videotime;
 /** 热门评论（数组中存放的是RGCComment模型） */
-@property (nonatomic, strong) NSArray *top_cmt;
+//@property (nonatomic, strong) NSArray *top_cmt;
+
+/** 最热评论 */
+@property (nonatomic, strong) RGCComment *top_cmt;
 /****** 额外的辅助属性 ******/
 
 /** cell的高度 */
