@@ -54,6 +54,8 @@
 		D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9BCFCAA1CB2495F00F0AE14 /* RGCPushGuideView.m */; };
 		D9BCFCAD1CB249D600F0AE14 /* RGCPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */; };
 		D9C212A01CEDB4AC00B04E78 /* RGCCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C2129F1CEDB4AC00B04E78 /* RGCCommentHeaderView.m */; };
+		D9C212A41CEEAA5700B04E78 /* RGCCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C212A21CEEAA5700B04E78 /* RGCCommentCell.m */; };
+		D9C212A51CEEAA5700B04E78 /* RGCCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9C212A31CEEAA5700B04E78 /* RGCCommentCell.xib */; };
 		D9E75AAD1CE34BD2001F6A9F /* RGCTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */; };
 		D9E75AAF1CE34BEA001F6A9F /* RGCTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */; };
 		D9E75AB21CE3690F001F6A9F /* RGCTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9E75AB11CE3690F001F6A9F /* RGCTopicVideoView.m */; };
@@ -149,6 +151,9 @@
 		D9BCFCAC1CB249D600F0AE14 /* RGCPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCPushGuideView.xib; sourceTree = "<group>"; };
 		D9C2129E1CEDB4AC00B04E78 /* RGCCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCCommentHeaderView.h; sourceTree = "<group>"; };
 		D9C2129F1CEDB4AC00B04E78 /* RGCCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCCommentHeaderView.m; sourceTree = "<group>"; };
+		D9C212A11CEEAA5700B04E78 /* RGCCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCCommentCell.h; sourceTree = "<group>"; };
+		D9C212A21CEEAA5700B04E78 /* RGCCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCCommentCell.m; sourceTree = "<group>"; };
+		D9C212A31CEEAA5700B04E78 /* RGCCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCCommentCell.xib; sourceTree = "<group>"; };
 		D9E75AAB1CE34BD2001F6A9F /* RGCTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopicVoiceView.h; sourceTree = "<group>"; };
 		D9E75AAC1CE34BD2001F6A9F /* RGCTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopicVoiceView.m; sourceTree = "<group>"; };
 		D9E75AAE1CE34BEA001F6A9F /* RGCTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCTopicVoiceView.xib; sourceTree = "<group>"; };
@@ -307,6 +312,9 @@
 				D9E75AB31CE3691A001F6A9F /* RGCTopicVideoView.xib */,
 				D9C2129E1CEDB4AC00B04E78 /* RGCCommentHeaderView.h */,
 				D9C2129F1CEDB4AC00B04E78 /* RGCCommentHeaderView.m */,
+				D9C212A11CEEAA5700B04E78 /* RGCCommentCell.h */,
+				D9C212A21CEEAA5700B04E78 /* RGCCommentCell.m */,
+				D9C212A31CEEAA5700B04E78 /* RGCCommentCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -607,6 +615,7 @@
 			files = (
 				D923566F1CB19335004B3FFD /* RGCLoginRegisterViewController.xib in Resources */,
 				D96E07A01CD0B78900076AC3 /* RGCShowPictureViewController.xib in Resources */,
+				D9C212A51CEEAA5700B04E78 /* RGCCommentCell.xib in Resources */,
 				D92356641CAF6D74004B3FFD /* RGCRecommendTagCell.xib in Resources */,
 				D9BCFCAD1CB249D600F0AE14 /* RGCPushGuideView.xib in Resources */,
 				D9B48DDD1C97FD3C00D36FAD /* RGCRecommendViewController.xib in Resources */,
@@ -696,6 +705,7 @@
 				D9B48DE91C9849FF00D36FAD /* RGCRecommendUserCell.m in Sources */,
 				D9E75AB71CE41B54001F6A9F /* RGCUser.m in Sources */,
 				D9B48DE01C97FF2900D36FAD /* RGCRecommendCategory.m in Sources */,
+				D9C212A41CEEAA5700B04E78 /* RGCCommentCell.m in Sources */,
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D96E079F1CD0B78900076AC3 /* RGCShowPictureViewController.m in Sources */,

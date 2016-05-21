@@ -11,11 +11,14 @@
 #import "RGCTopic.h"
 #import "RGCComment.h"
 #import "RGCCommentHeaderView.h"
+#import "RGCCommentCell.h"
 #import <MJRefresh.h>
 #import <AFNetworking.h>
 #import <MJExtension.h>
 
 //static NSInteger const RGCHeaderLabelTag = 99;
+
+static NSString * const RGCCommentId = @"comment";
 
 @interface RGCCommentViewController () <UITableViewDelegate, UITableViewDataSource>
 /** 工具条底部间距 */
@@ -109,7 +112,15 @@
     // 监听键盘弹出
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
+    // cell的高度设置
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    // 背景色
     self.tableView.backgroundColor = RGCGlobalBg;
+    
+    // 注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RGCCommentCell class]) bundle:nil] forCellReuseIdentifier:RGCCommentId];
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)notification {
@@ -269,14 +280,14 @@
 //}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"comment"];
+    RGCCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:RGCCommentId];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"comment"];
+        cell = [[RGCCommentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:RGCCommentId];
     }
     
     RGCComment *comment = [self commentInIndexPath:indexPath];
-    cell.textLabel.text = comment.content;
+    cell.comment = comment;
     return cell;
 }
 
