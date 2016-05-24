@@ -23,3 +23,10 @@ NSString * const RGCUserSexFemale = @"f";
 
 /** 精华-cell-最热评论标题高度 */
 CGFloat const RGCTopicCellTopCmtTitleH = 20;
+
+/** tabBar被选中的通知名字 */
+NSString * const RGCTabBarDidSelectedNotification = @"RGCTabBarDidSelectedNotification";
+/** tabBar被选中的通知 - 被选中的控制器的index key */
+NSString * const RGCSelectedControllerIndexKey = @"RGCSelectedControllerIndexKey";
+/** tabBar被选中的通知 - 被选中的控制器的key */
+NSString * const RGCSelectedControllerKey = @"RGCSelectedControllerKey";

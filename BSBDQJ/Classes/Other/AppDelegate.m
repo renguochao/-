@@ -10,7 +10,7 @@
 #import "RGCMainViewController.h"
 #import "RGCPushGuideView.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -25,7 +25,9 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     // 设置窗口的根控制器
-    self.window.rootViewController = [[RGCMainViewController alloc] init];
+    RGCMainViewController *tabBarController = [[RGCMainViewController alloc] init];
+    tabBarController.delegate = self;
+    self.window.rootViewController = tabBarController;
     
     // 显示窗口
     [self.window makeKeyAndVisible];
@@ -34,6 +36,15 @@
     [RGCPushGuideView show];
     
     return YES;
+}
+
+#pragma mark - <UITabBarControllerDelegate>
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    // 发送通知
+    NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+    userInfo[RGCSelectedControllerKey] = viewController;
+    userInfo[RGCSelectedControllerIndexKey] = @(tabBarController.selectedIndex);
+    [RGCNoteCenter postNotificationName:RGCTabBarDidSelectedNotification object:nil userInfo:userInfo];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

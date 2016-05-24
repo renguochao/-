@@ -16,6 +16,8 @@
 #import "UIImage+RGCExtension.h"
 #import "UIImageView+RGCExtension.h"
 
+#define RGCNoteCenter [NSNotificationCenter defaultCenter]
+
 #ifdef DEBUG
 #define RGCLog(...) NSLog(__VA_ARGS__)
 #else

@@ -24,6 +24,10 @@
 @property (nonatomic, copy) NSString *maxtime;
 /** 上一次的请求参数 */
 @property (nonatomic, strong) NSDictionary *params;
+
+/** 上次选中的索引(或者控制器) */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
+
 @end
 
 @implementation RGCTopicViewController
@@ -60,6 +64,36 @@ static NSString * const RGCTopicCellId = @"topic";
     
     // 注册
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RGCTopicCell class]) bundle:nil] forCellReuseIdentifier:RGCTopicCellId];
+    
+    // 监听tabbar点击通知
+    [RGCNoteCenter addObserver:self selector:@selector(tabBarSelected:) name:RGCTabBarDidSelectedNotification object:nil];
+}
+
+- (void)tabBarSelected:(NSNotification *)note {
+    NSDictionary *userInfo = note.userInfo;
+    NSInteger currentSelectedIndex = [userInfo[RGCSelectedControllerIndexKey] integerValue];
+    
+    // 连续两次点击不同
+//    if (self.lastSelectedIndex != currentSelectedIndex) {
+//        self.lastSelectedIndex = currentSelectedIndex;
+//        return;
+//    }
+//    
+//    // 当前选中的不是精华模块，直接返回
+//    if (currentSelectedIndex != 0) {
+//        return;
+//    }
+//    
+//    // 刷新tableview
+//    [self.tableView.mj_header beginRefreshing];
+//    RGCLogFunc;
+    
+    // 如果是连续选中2次, 直接刷新
+    if (self.lastSelectedIndex == currentSelectedIndex && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    self.lastSelectedIndex = currentSelectedIndex;
 }
 
 - (void)setupRefresh {
