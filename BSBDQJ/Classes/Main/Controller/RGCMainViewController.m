@@ -13,6 +13,7 @@
 #import "RGCNewViewController.h"
 #import "RGCNavigationController.h"
 #import "RGCTabBar.h"
+#import "RGCTopWindow.h"
 
 /**
  *
@@ -81,6 +82,14 @@
     
     // 更换TabBar
     [self setValue:[[RGCTabBar alloc] init] forKey:@"tabBar"];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    // 添加一个window, 点击这个window, 可以让屏幕上的scrollView滚到最顶部
+    [RGCTopWindow show];
 }
 
 /**

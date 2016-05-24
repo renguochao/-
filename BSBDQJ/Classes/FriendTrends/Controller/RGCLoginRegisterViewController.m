@@ -7,6 +7,7 @@
 //
 
 #import "RGCLoginRegisterViewController.h"
+#import "RGCTopWindow.h"
 
 @interface RGCLoginRegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
@@ -33,6 +34,8 @@
 //                                 NSFontAttributeName : [UIFont systemFontOfSize:30]} range:NSMakeRange(1, 1)];
     
 //    self.phoneField.attributedPlaceholder = placeHolder;
+    
+    [RGCTopWindow hide];
 }
 
 - (IBAction)showLoginOrRegister:(UIButton *)button {
@@ -62,6 +65,7 @@
 }
 
 - (IBAction)close:(id)sender {
+    [RGCTopWindow show];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

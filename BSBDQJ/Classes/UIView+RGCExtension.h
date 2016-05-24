@@ -18,6 +18,11 @@
 @property (nonatomic, assign) CGFloat centerX;
 @property (nonatomic, assign) CGFloat centerY;
 
+/**
+ *  判断控件是否正在显示在主窗口上
+ */
+- (BOOL)isShowingOnKeyWindow;
+
 //- (CGFloat)x;
 //- (void)setX:(CGFloat)x;
 /** 在分类中声明@property, 只会生成方法的声明, 不会生成方法的实现和带有_下划线的成员变量*/
