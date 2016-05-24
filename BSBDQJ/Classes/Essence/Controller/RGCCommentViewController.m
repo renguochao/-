@@ -250,11 +250,6 @@ static NSString * const RGCCommentId = @"comment";
     return [self commentsInSection:indexPath.section][indexPath.row];
 }
 
-#pragma mark - <UITableViewDelegate>
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    [self.view endEditing:YES];
-}
-
 #pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -360,6 +355,13 @@ static NSString * const RGCCommentId = @"comment";
 //    }
 //}
 
+#pragma mark - <UITableViewDelegate>
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.view endEditing:YES];
+    
+    [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RGCCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:RGCCommentId];
     
@@ -370,6 +372,45 @@ static NSString * const RGCCommentId = @"comment";
     RGCComment *comment = [self commentInIndexPath:indexPath];
     cell.comment = comment;
     return cell;
+}
+
+#pragma mark - MenuController 处理
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible) {
+        [menu setMenuVisible:NO animated:YES];
+        return;
+    } else {
+        // 被点击的cell
+        RGCCommentCell *cell = (RGCCommentCell *)[tableView cellForRowAtIndexPath:indexPath];
+        [cell becomeFirstResponder];
+        
+        // 显示MenuController
+        UIMenuItem *ding = [[UIMenuItem alloc] initWithTitle:@"顶" action:@selector(ding:)];
+        UIMenuItem *reply = [[UIMenuItem alloc] initWithTitle:@"回复" action:@selector(reply:)];
+        UIMenuItem *report = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(report:)];
+        menu.menuItems = @[ding, reply, report];
+        CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height * 0.5);
+        [menu setTargetRect:rect inView:cell];
+        [menu setMenuVisible:YES animated:YES];
+    }
+    
+}
+
+- (void)ding:(UIMenuController *)menu {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    RGCLog(@"%s %@ %@", __func__, menu, [self commentInIndexPath:indexPath]);
+}
+
+- (void)reply:(UIMenuController *)menu {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    RGCLog(@"%s %@ %@", __func__, menu, [self commentInIndexPath:indexPath]);
+}
+
+- (void)report:(UIMenuController *)menu {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    RGCLog(@"%s %@ %@", __func__, menu, [self commentInIndexPath:indexPath]);
 }
 
 @end
