@@ -97,7 +97,7 @@
     self.sinaVView.hidden = !topic.isSina_v;
     
     // 设置其他控件
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView setHeader:topic.profile_image];
     self.nameLabel.text = topic.name;
     self.createTimeLabel.text = topic.create_time;
     

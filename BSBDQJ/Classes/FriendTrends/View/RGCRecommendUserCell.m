@@ -24,7 +24,8 @@
     
     self.screenNameLabel.text = user.screen_name;
     self.fansCountLabel.text = [NSString stringWithFormat:@"%zd人关注", user.fans_count];
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.headerImageView setHeader:user.header];
+    
 }
 
 

@@ -40,7 +40,7 @@
 - (void)setComment:(RGCComment *)comment {
     _comment = comment;
     
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:comment.user.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [self.profileImageView setHeader:comment.user.profile_image];
     self.genderImageView.image = [comment.user.sex isEqualToString:RGCUserSexMale] ? [UIImage imageNamed:@"Profile_manIcon"] : [UIImage imageNamed:@"Profile_womanIcon"];
     self.contentLabel.text = comment.content;
     self.usernameLabel.text = comment.user.username;
