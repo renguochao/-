@@ -31,6 +31,7 @@
 		D96E07A01CD0B78900076AC3 /* RGCShowPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96E079E1CD0B78900076AC3 /* RGCShowPictureViewController.xib */; };
 		D96F8D8C1CD35363005E9D70 /* RGCPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D96F8D8A1CD35363005E9D70 /* RGCPublishViewController.m */; };
 		D96F8D8D1CD35363005E9D70 /* RGCPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D96F8D8B1CD35363005E9D70 /* RGCPublishViewController.xib */; };
+		D97412DF1CF2E2FE000F4FCC /* RGCTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412DE1CF2E2FE000F4FCC /* RGCTopWindow.m */; };
 		D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */; };
 		D97AE02C1CC3E80400BDA689 /* RGCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE02B1CC3E80400BDA689 /* RGCConst.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
@@ -109,6 +110,8 @@
 		D96F8D891CD35363005E9D70 /* RGCPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCPublishViewController.h; sourceTree = "<group>"; };
 		D96F8D8A1CD35363005E9D70 /* RGCPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCPublishViewController.m; sourceTree = "<group>"; };
 		D96F8D8B1CD35363005E9D70 /* RGCPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RGCPublishViewController.xib; sourceTree = "<group>"; };
+		D97412DD1CF2E2FE000F4FCC /* RGCTopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopWindow.h; sourceTree = "<group>"; };
+		D97412DE1CF2E2FE000F4FCC /* RGCTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopWindow.m; sourceTree = "<group>"; };
 		D97AE0271CC3BF9D00BDA689 /* RGCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopic.h; sourceTree = "<group>"; };
 		D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopic.m; sourceTree = "<group>"; };
 		D97AE02A1CC3E80400BDA689 /* RGCConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCConst.h; sourceTree = "<group>"; };
@@ -315,6 +318,8 @@
 				D9C212A11CEEAA5700B04E78 /* RGCCommentCell.h */,
 				D9C212A21CEEAA5700B04E78 /* RGCCommentCell.m */,
 				D9C212A31CEEAA5700B04E78 /* RGCCommentCell.xib */,
+				D97412DD1CF2E2FE000F4FCC /* RGCTopWindow.h */,
+				D97412DE1CF2E2FE000F4FCC /* RGCTopWindow.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 				D92356721CB19DD3004B3FFD /* RGCVerticalButton.m in Sources */,
 				D96E079B1CD0A5B700076AC3 /* RGCProgressView.m in Sources */,
 				D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */,
+				D97412DF1CF2E2FE000F4FCC /* RGCTopWindow.m in Sources */,
 				D9B48DD31C97F54600D36FAD /* main.m in Sources */,
 				D952954C1CCE169E0060A2AD /* RGCTopicPictureView.m in Sources */,
 				D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */,

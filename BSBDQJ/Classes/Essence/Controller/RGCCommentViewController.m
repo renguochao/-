@@ -31,9 +31,22 @@ static NSString * const RGCCommentId = @"comment";
 @property (nonatomic, strong) NSMutableArray *latestComments;
 /** 保存帖子的top_cmt */
 @property (nonatomic, strong) RGCComment *saved_top_cmt;
+/** 保存当前的页码 */
+@property (nonatomic, assign) NSInteger page;
+
+/** 请求管理器 */
+@property (nonatomic, strong) AFHTTPSessionManager *manager;
 @end
 
 @implementation RGCCommentViewController
+
+- (AFHTTPSessionManager *)manager {
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    
+    return _manager;
+}
 
 - (NSMutableArray *)latestComments {
     if (!_latestComments) {
@@ -53,13 +66,20 @@ static NSString * const RGCCommentId = @"comment";
 }
 
 - (void)setupRefresh {
+    // 上拉刷新
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewComments)];
     [self.tableView.mj_header beginRefreshing];
     
-    
+    // 下拉刷新
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreComments)];
+    self.tableView.mj_footer.hidden = YES;
 }
 
 - (void)loadNewComments {
+    
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"dataList";
@@ -67,7 +87,7 @@ static NSString * const RGCCommentId = @"comment";
     params[@"data_id"] = self.topic.ID;
     params[@"hot"] = @"1";
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         // 最热评论
         self.hotComments = [RGCComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         
@@ -76,9 +96,60 @@ static NSString * const RGCCommentId = @"comment";
         
         [self.tableView reloadData];
         
+        // 设置页码
+        self.page = 1;
+        
+        // 结束刷新
         [self.tableView.mj_header endRefreshing];
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) {
+            self.tableView.mj_footer.hidden = YES;
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_header endRefreshing];
+    }];
+}
+
+- (void)loadMoreComments {
+    
+    // 结束之前的所有请求
+    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    
+    // 页码
+    NSInteger page = self.page + 1;
+    
+    // 参数
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"dataList";
+    params[@"c"] = @"comment";
+    params[@"data_id"] = self.topic.ID;
+    params[@"page"] = @(page);
+    RGCComment *lastComment = [self.latestComments lastObject];
+    params[@"lastcid"] = lastComment.ID;
+    
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        // 最新评论
+        NSArray *newComments = [RGCComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
+        [self.latestComments addObjectsFromArray:newComments];
+        
+        // 刷新数据
+        [self.tableView reloadData];
+        
+        // 设置页码
+        self.page = page;
+        
+        // 控制footer的状态
+        NSInteger total = [responseObject[@"total"] integerValue];
+        if (self.latestComments.count >= total) {
+            self.tableView.mj_footer.hidden = YES;
+        } else {
+            // 结束刷新
+            [self.tableView.mj_footer endRefreshing];
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [self.tableView.mj_footer endRefreshing];
     }];
 }
 
@@ -121,6 +192,12 @@ static NSString * const RGCCommentId = @"comment";
     
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RGCCommentCell class]) bundle:nil] forCellReuseIdentifier:RGCCommentId];
+    
+    // 分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    // TableView底部内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, RGCTopicCellMargin, 0);
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)notification {
@@ -148,6 +225,10 @@ static NSString * const RGCCommentId = @"comment";
         self.topic.top_cmt = self.saved_top_cmt;
         [self.topic setValue:@0 forKey:@"cellHeight"];
     }
+    
+    // 取消所有任务
+//    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)]; // 仅取消之前任务，Session仍可用
+    [self.manager invalidateSessionCancelingTasks:YES]; // 关闭session
 }
 
 /**

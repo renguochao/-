@@ -7,7 +7,14 @@
 //
 
 #import "RGCComment.h"
+#import <MJExtension.h>
 
 @implementation RGCComment
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{
+             @"ID" : @"id"
+             };
+}
 
 @end

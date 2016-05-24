@@ -10,6 +10,8 @@
 @class RGCUser;
 
 @interface RGCComment : NSObject
+/** id */
+@property (nonatomic, copy) NSString *ID;
 /** 音频文件时长 */
 @property (nonatomic, assign) NSInteger voicetime;
 /** 音频文件路径 */

@@ -23,6 +23,12 @@
 
 @implementation RGCCommentCell
 
+-(void)awakeFromNib {
+    UIImageView *bgView = [[UIImageView alloc] init];
+    bgView.image = [UIImage imageNamed:@"mainCellBackground"];
+    self.backgroundView = bgView;
+}
+
 - (void)setComment:(RGCComment *)comment {
     _comment = comment;
     
@@ -38,6 +44,14 @@
     } else {
         self.voiceButton.hidden = YES;
     }
+}
+
+- (void)setFrame:(CGRect)frame {
+    
+    frame.origin.x = RGCTopicCellMargin;
+    frame.size.width -= RGCTopicCellMargin * 2;
+    
+    [super setFrame:frame];
 }
 
 @end
