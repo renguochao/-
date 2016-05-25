@@ -34,6 +34,10 @@
 		D97412DF1CF2E2FE000F4FCC /* RGCTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412DE1CF2E2FE000F4FCC /* RGCTopWindow.m */; };
 		D97412E21CF3FBAE000F4FCC /* UIImage+RGCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412E11CF3FBAE000F4FCC /* UIImage+RGCExtension.m */; };
 		D97412E51CF430D5000F4FCC /* UIImageView+RGCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412E41CF430D5000F4FCC /* UIImageView+RGCExtension.m */; };
+		D97412E81CF54690000F4FCC /* RGCMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412E71CF54690000F4FCC /* RGCMeCell.m */; };
+		D97412EB1CF550AA000F4FCC /* RGCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412EA1CF550AA000F4FCC /* RGCMeFooterView.m */; };
+		D97412EE1CF5834F000F4FCC /* RGCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412ED1CF5834F000F4FCC /* RGCSquare.m */; };
+		D97412F11CF58B0B000F4FCC /* RGCSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D97412F01CF58B0B000F4FCC /* RGCSquareButton.m */; };
 		D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */; };
 		D97AE02C1CC3E80400BDA689 /* RGCConst.m in Sources */ = {isa = PBXBuildFile; fileRef = D97AE02B1CC3E80400BDA689 /* RGCConst.m */; };
 		D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A89A3C1CABC13100F409DD /* RGCMainViewController.m */; };
@@ -118,6 +122,14 @@
 		D97412E11CF3FBAE000F4FCC /* UIImage+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RGCExtension.m"; sourceTree = "<group>"; };
 		D97412E31CF430D5000F4FCC /* UIImageView+RGCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RGCExtension.h"; sourceTree = "<group>"; };
 		D97412E41CF430D5000F4FCC /* UIImageView+RGCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+RGCExtension.m"; sourceTree = "<group>"; };
+		D97412E61CF54690000F4FCC /* RGCMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMeCell.h; sourceTree = "<group>"; };
+		D97412E71CF54690000F4FCC /* RGCMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMeCell.m; sourceTree = "<group>"; };
+		D97412E91CF550AA000F4FCC /* RGCMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCMeFooterView.h; sourceTree = "<group>"; };
+		D97412EA1CF550AA000F4FCC /* RGCMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCMeFooterView.m; sourceTree = "<group>"; };
+		D97412EC1CF5834F000F4FCC /* RGCSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCSquare.h; sourceTree = "<group>"; };
+		D97412ED1CF5834F000F4FCC /* RGCSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCSquare.m; sourceTree = "<group>"; };
+		D97412EF1CF58B0B000F4FCC /* RGCSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCSquareButton.h; sourceTree = "<group>"; };
+		D97412F01CF58B0B000F4FCC /* RGCSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCSquareButton.m; sourceTree = "<group>"; };
 		D97AE0271CC3BF9D00BDA689 /* RGCTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCTopic.h; sourceTree = "<group>"; };
 		D97AE0281CC3BF9D00BDA689 /* RGCTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCTopic.m; sourceTree = "<group>"; };
 		D97AE02A1CC3E80400BDA689 /* RGCConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCConst.h; sourceTree = "<group>"; };
@@ -467,6 +479,8 @@
 		D9B48DBE1C97F54600D36FAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D97412EC1CF5834F000F4FCC /* RGCSquare.h */,
+				D97412ED1CF5834F000F4FCC /* RGCSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -481,6 +495,12 @@
 		D9B48DC01C97F54600D36FAD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D97412E61CF54690000F4FCC /* RGCMeCell.h */,
+				D97412E71CF54690000F4FCC /* RGCMeCell.m */,
+				D97412E91CF550AA000F4FCC /* RGCMeFooterView.h */,
+				D97412EA1CF550AA000F4FCC /* RGCMeFooterView.m */,
+				D97412EF1CF58B0B000F4FCC /* RGCSquareButton.h */,
+				D97412F01CF58B0B000F4FCC /* RGCSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -714,6 +734,8 @@
 				D9A89A3D1CABC13100F409DD /* RGCMainViewController.m in Sources */,
 				D97412DF1CF2E2FE000F4FCC /* RGCTopWindow.m in Sources */,
 				D9B48DD31C97F54600D36FAD /* main.m in Sources */,
+				D97412EB1CF550AA000F4FCC /* RGCMeFooterView.m in Sources */,
+				D97412E81CF54690000F4FCC /* RGCMeCell.m in Sources */,
 				D97412E51CF430D5000F4FCC /* UIImageView+RGCExtension.m in Sources */,
 				D952954C1CCE169E0060A2AD /* RGCTopicPictureView.m in Sources */,
 				D92356471CACABE7004B3FFD /* RGCNavigationController.m in Sources */,
@@ -726,11 +748,13 @@
 				D923563E1CAC01B6004B3FFD /* RGCTabBar.m in Sources */,
 				D9B48DD41C97F54600D36FAD /* RGCFriendTrendViewController.m in Sources */,
 				D96E079F1CD0B78900076AC3 /* RGCShowPictureViewController.m in Sources */,
+				D97412F11CF58B0B000F4FCC /* RGCSquareButton.m in Sources */,
 				D9E75AAD1CE34BD2001F6A9F /* RGCTopicVoiceView.m in Sources */,
 				D92356411CAC30B9004B3FFD /* UIBarButtonItem+RGCExtension.m in Sources */,
 				D97AE0291CC3BF9D00BDA689 /* RGCTopic.m in Sources */,
 				D92356631CAF6D74004B3FFD /* RGCRecommendTagCell.m in Sources */,
 				D96F8D8C1CD35363005E9D70 /* RGCPublishViewController.m in Sources */,
+				D97412EE1CF5834F000F4FCC /* RGCSquare.m in Sources */,
 				D9B48DD21C97F54600D36FAD /* AppDelegate.m in Sources */,
 				D92356511CAD0BB4004B3FFD /* RGCRecommendUser.m in Sources */,
 				D9BCFCAB1CB2495F00F0AE14 /* RGCPushGuideView.m in Sources */,

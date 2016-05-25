@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RGCMeViewController : UIViewController
+@interface RGCMeViewController : UITableViewController
 
 @end
