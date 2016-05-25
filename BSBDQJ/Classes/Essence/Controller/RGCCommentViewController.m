@@ -88,6 +88,11 @@ static NSString * const RGCCommentId = @"comment";
     params[@"hot"] = @"1";
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        // 没有数据
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            [self.tableView.mj_header endRefreshing];
+            return;
+        }
         // 最热评论
         self.hotComments = [RGCComment mj_objectArrayWithKeyValuesArray:responseObject[@"hot"]];
         
@@ -130,6 +135,11 @@ static NSString * const RGCCommentId = @"comment";
     params[@"lastcid"] = lastComment.ID;
     
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+        // 没有数据
+        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+            self.tableView.mj_footer.hidden = YES;
+            return;
+        }
         // 最新评论
         NSArray *newComments = [RGCComment mj_objectArrayWithKeyValuesArray:responseObject[@"data"]];
         [self.latestComments addObjectsFromArray:newComments];

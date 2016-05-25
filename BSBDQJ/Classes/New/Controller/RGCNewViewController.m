@@ -23,6 +23,8 @@
     // 设置导航栏左边的按钮
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highlightImage:@"MainTagSubIconClick" target:self action:@selector(tagClick)];
     
+    // 设置背景色
+    self.view.backgroundColor = RGCGlobalBg;
 }
 
 - (void)tagClick {

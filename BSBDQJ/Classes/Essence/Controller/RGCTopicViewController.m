@@ -14,6 +14,7 @@
 #import "RGCTopic.h"
 #import "RGCTopicCell.h"
 #import "RGCCommentViewController.h"
+#import "RGCNewViewController.h"
 
 @interface RGCTopicViewController ()
 /** 帖子数据 */
@@ -107,6 +108,11 @@ static NSString * const RGCTopicCellId = @"topic";
     self.tableView.mj_footer.hidden = YES;
 }
 
+#pragma mark - a参数
+- (NSString *)a {
+    return [self.parentViewController isKindOfClass:[RGCNewViewController class]] ? @"newlist" : @"list";
+}
+
 #pragma mark - 数据处理
 /**
  * 加载新的帖子数据
@@ -117,7 +123,7 @@ static NSString * const RGCTopicCellId = @"topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
@@ -165,7 +171,7 @@ static NSString * const RGCTopicCellId = @"topic";
     
     // 参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     params[@"page"] = @(self.page);
