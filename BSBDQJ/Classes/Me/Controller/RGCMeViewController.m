@@ -9,6 +9,7 @@
 #import "RGCMeViewController.h"
 #import "RGCMeCell.h"
 #import "RGCMeFooterView.h"
+#import "RGCWebViewController.h"
 
 @interface RGCMeViewController () <UITableViewDelegate, UITableViewDataSource, RGCMeFooterViewDelegate>
 @property (nonatomic, strong) RGCMeFooterView *footerView;
@@ -61,10 +62,27 @@ static NSString * const RGCMeId = @"me";
 
 - (void)settingClick {
     RGCLogFunc;
+    RGCWebViewController *web = [[RGCWebViewController alloc] init];
+    web.url = @"http://www.baidu.com";
+    
+    // 取出当前的导航控制器
+    UITabBarController *tabBarVc = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    UINavigationController *nav = (UINavigationController *)tabBarVc.selectedViewController;
+    [nav pushViewController:web animated:YES];
 }
 
 - (void)nightModeClick {
     RGCLogFunc;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    RGCWebViewController *web = [[RGCWebViewController alloc] init];
+    web.url = @"http://www.baidu.com";
+    
+    // 取出当前的导航控制器
+    UITabBarController *tabBarVc = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    UINavigationController *nav = (UINavigationController *)tabBarVc.selectedViewController;
+    [nav pushViewController:web animated:YES];
 }
 
 #pragma mark - 数据源方法
